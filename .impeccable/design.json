@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-12T14:51:33.130478+00:00",
+  "title": "Design System: 卫戍协议助手",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "paper",
+        "tonalRamp": [
+          "oklch(15% 0.0080 114.22)",
+          "oklch(26% 0.0080 114.22)",
+          "oklch(38% 0.0080 114.22)",
+          "oklch(49% 0.0080 114.22)",
+          "oklch(61% 0.0080 114.22)",
+          "oklch(72% 0.0080 114.22)",
+          "oklch(84% 0.0080 114.22)",
+          "oklch(95% 0.0080 114.22)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "surface",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "surface-soft": {
+        "role": "neutral",
+        "displayName": "surface-soft",
+        "tonalRamp": [
+          "oklch(15% 0.0123 121.70)",
+          "oklch(26% 0.0123 121.70)",
+          "oklch(38% 0.0123 121.70)",
+          "oklch(49% 0.0123 121.70)",
+          "oklch(61% 0.0123 121.70)",
+          "oklch(72% 0.0123 121.70)",
+          "oklch(84% 0.0123 121.70)",
+          "oklch(95% 0.0123 121.70)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "ink",
+        "tonalRamp": [
+          "oklch(15% 0.0124 150.20)",
+          "oklch(26% 0.0124 150.20)",
+          "oklch(38% 0.0124 150.20)",
+          "oklch(49% 0.0124 150.20)",
+          "oklch(61% 0.0124 150.20)",
+          "oklch(72% 0.0124 150.20)",
+          "oklch(84% 0.0124 150.20)",
+          "oklch(95% 0.0124 150.20)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "muted",
+        "tonalRamp": [
+          "oklch(15% 0.0196 137.08)",
+          "oklch(26% 0.0196 137.08)",
+          "oklch(38% 0.0196 137.08)",
+          "oklch(49% 0.0196 137.08)",
+          "oklch(61% 0.0196 137.08)",
+          "oklch(72% 0.0196 137.08)",
+          "oklch(84% 0.0196 137.08)",
+          "oklch(95% 0.0196 137.08)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "line",
+        "tonalRamp": [
+          "oklch(15% 0.0158 126.84)",
+          "oklch(26% 0.0158 126.84)",
+          "oklch(38% 0.0158 126.84)",
+          "oklch(49% 0.0158 126.84)",
+          "oklch(61% 0.0158 126.84)",
+          "oklch(72% 0.0158 126.84)",
+          "oklch(84% 0.0158 126.84)",
+          "oklch(95% 0.0158 126.84)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "accent",
+        "tonalRamp": [
+          "oklch(15% 0.0595 137.40)",
+          "oklch(26% 0.0595 137.40)",
+          "oklch(38% 0.0595 137.40)",
+          "oklch(49% 0.0595 137.40)",
+          "oklch(61% 0.0595 137.40)",
+          "oklch(72% 0.0595 137.40)",
+          "oklch(84% 0.0595 137.40)",
+          "oklch(95% 0.0595 137.40)"
+        ]
+      },
+      "accent-soft": {
+        "role": "primary",
+        "displayName": "accent-soft",
+        "tonalRamp": [
+          "oklch(15% 0.0213 127.40)",
+          "oklch(26% 0.0213 127.40)",
+          "oklch(38% 0.0213 127.40)",
+          "oklch(49% 0.0213 127.40)",
+          "oklch(61% 0.0213 127.40)",
+          "oklch(72% 0.0213 127.40)",
+          "oklch(84% 0.0213 127.40)",
+          "oklch(95% 0.0213 127.40)"
+        ]
+      },
+      "danger": {
+        "role": "secondary",
+        "displayName": "danger",
+        "tonalRamp": [
+          "oklch(15% 0.1357 17.61)",
+          "oklch(26% 0.1357 17.61)",
+          "oklch(38% 0.1357 17.61)",
+          "oklch(49% 0.1357 17.61)",
+          "oklch(61% 0.1357 17.61)",
+          "oklch(72% 0.1357 17.61)",
+          "oklch(84% 0.1357 17.61)",
+          "oklch(95% 0.1357 17.61)"
+        ]
+      },
+      "danger-soft": {
+        "role": "secondary",
+        "displayName": "danger-soft",
+        "tonalRamp": [
+          "oklch(15% 0.0163 17.45)",
+          "oklch(26% 0.0163 17.45)",
+          "oklch(38% 0.0163 17.45)",
+          "oklch(49% 0.0163 17.45)",
+          "oklch(61% 0.0163 17.45)",
+          "oklch(72% 0.0163 17.45)",
+          "oklch(84% 0.0163 17.45)",
+          "oklch(95% 0.0163 17.45)"
+        ]
+      },
+      "warning": {
+        "role": "secondary",
+        "displayName": "warning",
+        "tonalRamp": [
+          "oklch(15% 0.0942 77.90)",
+          "oklch(26% 0.0942 77.90)",
+          "oklch(38% 0.0942 77.90)",
+          "oklch(49% 0.0942 77.90)",
+          "oklch(61% 0.0942 77.90)",
+          "oklch(72% 0.0942 77.90)",
+          "oklch(84% 0.0942 77.90)",
+          "oklch(95% 0.0942 77.90)"
+        ]
+      },
+      "warning-soft": {
+        "role": "secondary",
+        "displayName": "warning-soft",
+        "tonalRamp": [
+          "oklch(15% 0.0333 88.06)",
+          "oklch(26% 0.0333 88.06)",
+          "oklch(38% 0.0333 88.06)",
+          "oklch(49% 0.0333 88.06)",
+          "oklch(61% 0.0333 88.06)",
+          "oklch(72% 0.0333 88.06)",
+          "oklch(84% 0.0333 88.06)",
+          "oklch(95% 0.0333 88.06)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Section heading",
+        "purpose": "Workspace headings."
+      },
+      "title": {
+        "displayName": "Card name",
+        "purpose": "Operator identification."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Functional reading."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Supporting metadata."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "portrait-state",
+        "value": "filter 180ms ease-out, opacity 180ms ease-out",
+        "purpose": "In-place Ban feedback; disabled for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1199px"
+      },
+      {
+        "name": "tablet",
+        "value": "850px"
+      },
+      {
+        "name": "mobile",
+        "value": "600px"
+      },
+      {
+        "name": "narrow-mobile",
+        "value": "359px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "button-primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Empty-result recovery action.",
+      "html": "<button class=\"ds-button-primary\">查看全部干员</button>",
+      "css": ".ds-button-primary { font:14px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; padding:8px 18px; border:1px solid var(--accent,#465e3d); border-radius:4px; background:var(--accent,#465e3d); color:#fff; cursor:pointer; } .ds-button-primary:hover { background:#334c2a; } .ds-button-primary:focus-visible { outline:2px solid var(--accent,#465e3d); outline-offset:4px; }"
+    },
+    {
+      "name": "button-quiet",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Clear Ban, understated until hover.",
+      "html": "<button class=\"ds-button-quiet\">清空 Ban</button>",
+      "css": ".ds-button-quiet { font:13px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; min-height:36px; padding:5px 10px; border:1px solid var(--line,#d6dbd0); border-radius:4px; background:var(--surface,#fff); color:var(--ink,#252b26); cursor:pointer; } .ds-button-quiet:hover:not(:disabled) { border-color:var(--danger,#9b3540); color:var(--danger,#9b3540); background:var(--danger-soft,#f8e9e9); } .ds-button-quiet:disabled { color:#747c70; background:#f7f8f5; cursor:default; } .ds-button-quiet:focus-visible { outline:2px solid var(--accent,#465e3d); outline-offset:4px; }"
+    },
+    {
+      "name": "button-reset",
+      "kind": "button",
+      "refersTo": "button-reset",
+      "description": "Reset filters without clearing Ban.",
+      "html": "<button class=\"ds-button-reset\">重置筛选</button>",
+      "css": ".ds-button-reset { font:12px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; min-height:34px; padding:4px 0 4px 12px; border:0; background:transparent; color:var(--accent,#465e3d); cursor:pointer; } .ds-button-reset:hover:not(:disabled) { text-decoration:underline; text-underline-offset:4px; } .ds-button-reset:disabled { color:#747c70; cursor:default; } .ds-button-reset:focus-visible { outline:2px solid var(--accent,#465e3d); outline-offset:4px; }"
+    },
+    {
+      "name": "covenant-select",
+      "kind": "input",
+      "refersTo": "covenant-select",
+      "description": "Native covenant selector; no text input exists.",
+      "html": "<select class=\"ds-covenant-select\" aria-label=\"盟约\"><option>全部盟约</option><option>乌萨斯</option></select>",
+      "css": ".ds-covenant-select { font:13px -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; height:34px; min-width:148px; padding:4px 30px 4px 10px; background:var(--surface,#fff); color:var(--ink,#252b26); border:1px solid #adb7a5; border-radius:3px; cursor:pointer; } .ds-covenant-select:focus-visible { outline:2px solid var(--accent,#465e3d); outline-offset:4px; }"
+    },
+    {
+      "name": "status-filter",
+      "kind": "button",
+      "refersTo": "status-filter",
+      "description": "Counted status filter, not navigation.",
+      "html": "<button class=\"ds-status-filter\" aria-pressed=\"true\">全部 <span>143</span></button>",
+      "css": ".ds-status-filter { position:relative; font:14px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; min-height:43px; padding:6px 2px 12px; border:0; background:transparent; color:var(--muted,#636b60); cursor:pointer; } .ds-status-filter:hover { color:var(--ink,#252b26); } .ds-status-filter[aria-pressed=true] { color:var(--accent,#465e3d); font-weight:650; } .ds-status-filter[aria-pressed=true]::after { content:\"\"; position:absolute; height:2px; bottom:-1px; left:0; right:0; background:currentColor; } .ds-status-filter span { padding:0 6px; border-radius:3px; font-size:12px; font-variant-numeric:tabular-nums; background:var(--accent,#465e3d); color:#fff; } .ds-status-filter:focus-visible { outline:2px solid var(--accent,#465e3d); outline-offset:4px; }"
+    },
+    {
+      "name": "status-chip",
+      "kind": "chip",
+      "refersTo": "status-chip",
+      "description": "Noninteractive pending-verification label.",
+      "html": "<span class=\"ds-status-chip\">待核实</span>",
+      "css": ".ds-status-chip { font:600 11px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; padding:1px 6px; border-radius:2px; background:var(--warning-soft,#fbf1d9); color:var(--warning,#815c18); }"
+    },
+    {
+      "name": "operator-card",
+      "kind": "card",
+      "refersTo": "operator-card",
+      "description": "Desktop geometry sample; preview omits the local portrait, not replaced by invented imagery.",
+      "html": "<article class=\"ds-operator-card\"><div class=\"ds-portrait\"><span class=\"ds-status\">可用</span></div><div class=\"ds-info\"><h3>折桠</h3><div class=\"ds-covenants\">乌萨斯 不屈</div><p class=\"ds-reason\">核心盟约可用</p></div></article>",
+      "css": ".ds-operator-card { width:156px; border:1px solid var(--line,#d6dbd0); border-radius:4px; background:var(--surface,#fff); overflow:hidden; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; color:var(--ink,#252b26); } .ds-portrait { position:relative; aspect-ratio:1.25; background:#e7e9e3; border-bottom:1px solid var(--line,#d6dbd0); } .ds-status { position:absolute; right:5px; bottom:5px; padding:1px 6px; border-radius:2px; background:#f2f6ed; color:#405735; font-size:11px; font-weight:600; } .ds-info { padding:9px 10px 11px; } .ds-info h3 { margin:0; min-height:22px; font-size:14px; font-weight:650; line-height:1.4; } .ds-covenants { min-height:36px; font-size:11px; line-height:1.6; color:var(--muted,#636b60); } .ds-reason { margin:4px 0 0; min-height:40px; padding-top:4px; border-top:1px solid var(--line,#d6dbd0); font-size:11px; line-height:1.5; color:var(--muted,#636b60); }"
+    },
+    {
+      "name": "Covenant Ban",
+      "kind": "button",
+      "refersTo": "button-ban",
+      "description": "Selected Ban state; compact preview omits the decorative covenant logo.",
+      "html": "<button class=\"ds-ban\" aria-pressed=\"true\"><span>乌萨斯</span></button>",
+      "css": ".ds-ban { position: relative; min-height: 43px; padding: 5px 8px; display: flex; align-items: center; gap: 6px; border: 1px solid var(--line,#d6dbd0); border-radius: 3px; background: #f8f9f6; text-align: left; font-size: 12px; font-weight: 500; white-space: nowrap; } .ds-ban:hover { background: var(--surface-soft,#eef1e8); border-color: #85957a; } .ds-ban[aria-pressed='true'] { color: var(--danger,#9b3540); background: var(--danger-soft,#f8e9e9); border-color: #bc747b; } .ds-ban[aria-pressed='true'] > span { text-decoration: line-through; text-decoration-thickness: 1px; } .ds-ban { min-height: 44px; padding: 4px; gap: 4px; font-size: 11px; } .ds-ban { font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif; color:var(--ink,#252b26); cursor:pointer; } .ds-ban:focus-visible { outline:2px solid var(--accent,#465e3d); outline-offset:4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "高密度干员图录",
+    "overview": "A compact Chinese operator catalog on pale gray-green paper. Real portraits carry recognition; fine rules and concise metadata support comparison. Desktop is primary, with a vertically stacked mobile layout. Ban feedback stays on the existing cards rather than becoming a separate results screen.",
+    "keyCharacteristics": [
+      "Portrait-led density, not dashboard decoration.",
+      "Olive selection, muted red bans, amber uncertainty.",
+      "Stable portrait geometry with explicit status and reasons."
+    ],
+    "rules": [
+      {
+        "name": "The Explicit State Rule",
+        "body": "Color always accompanies a written status; banned covenant names also receive a strike-through.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do preserve real portraits, written status and a reason area on every card.",
+      "Do distinguish ordinary selection from Ban; retain amber for pending verification.",
+      "Do retain keyboard focus, semantic controls and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't change portrait dimensions or move pending-verification operators into the banned group.",
+      "Don't communicate a ruling through grayscale or color alone.",
+      "Don't present PRTS-ambiguous mixed cases as confirmed available or banned."
+    ]
+  }
+}

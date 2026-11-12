@@ -1,0 +1,1376 @@
+{
+  "source": "https://prts.wiki/w/卫戍协议·规程/PRTS盟约记录#干员数据库",
+  "fetchedAt": "2026-11-12T13:54:44.567861+00:00",
+  "operators": [
+    {
+      "name": "折桠",
+      "covenants": [
+        "乌萨斯",
+        "不屈"
+      ],
+      "image": "/images/operators/折桠.png",
+      "tier": 1
+    },
+    {
+      "name": "艾丝黛尔",
+      "covenants": [
+        "萨尔贡",
+        "独行"
+      ],
+      "image": "/images/operators/艾丝黛尔.png",
+      "tier": 1
+    },
+    {
+      "name": "幽灵鲨",
+      "covenants": [
+        "阿戈尔"
+      ],
+      "image": "/images/operators/幽灵鲨.png",
+      "tier": 1
+    },
+    {
+      "name": "野鬃",
+      "covenants": [
+        "卡西米尔",
+        "助力"
+      ],
+      "image": "/images/operators/野鬃.png",
+      "tier": 1
+    },
+    {
+      "name": "慕斯",
+      "covenants": [
+        "维多利亚"
+      ],
+      "image": "/images/operators/慕斯.png",
+      "tier": 1
+    },
+    {
+      "name": "角峰",
+      "covenants": [
+        "谢拉格",
+        "坚守"
+      ],
+      "image": "/images/operators/角峰.png",
+      "tier": 1
+    },
+    {
+      "name": "灰喉",
+      "covenants": [
+        "精准"
+      ],
+      "image": "/images/operators/灰喉.png",
+      "tier": 1
+    },
+    {
+      "name": "深靛",
+      "covenants": [
+        "伊比利亚"
+      ],
+      "image": "/images/operators/深靛.png",
+      "tier": 1
+    },
+    {
+      "name": "卡达",
+      "covenants": [
+        "奥术"
+      ],
+      "image": "/images/operators/卡达.png",
+      "tier": 1
+    },
+    {
+      "name": "摆渡人",
+      "covenants": [
+        "坚守",
+        "不屈"
+      ],
+      "image": "/images/operators/摆渡人.png",
+      "tier": 1
+    },
+    {
+      "name": "夏栎",
+      "covenants": [
+        "助力"
+      ],
+      "image": "/images/operators/夏栎.png",
+      "tier": 1
+    },
+    {
+      "name": "杰克",
+      "covenants": [
+        "突袭"
+      ],
+      "image": "/images/operators/杰克.png",
+      "tier": 1
+    },
+    {
+      "name": "霜叶",
+      "covenants": [
+        "灵巧"
+      ],
+      "image": "/images/operators/霜叶.png",
+      "tier": 1
+    },
+    {
+      "name": "拜松",
+      "covenants": [
+        "炎"
+      ],
+      "image": "/images/operators/拜松.png",
+      "tier": 1
+    },
+    {
+      "name": "褐果",
+      "covenants": [
+        "聚合"
+      ],
+      "image": "/images/operators/褐果.png",
+      "tier": 1
+    },
+    {
+      "name": "烈夏",
+      "covenants": [
+        "乌萨斯"
+      ],
+      "image": "/images/operators/烈夏.png",
+      "tier": 1
+    },
+    {
+      "name": "陨星",
+      "covenants": [
+        "迅捷"
+      ],
+      "image": "/images/operators/陨星.png",
+      "tier": 1
+    },
+    {
+      "name": "拉普兰德",
+      "covenants": [
+        "叙拉古"
+      ],
+      "image": "/images/operators/拉普兰德.png",
+      "tier": 1
+    },
+    {
+      "name": "地灵",
+      "covenants": [
+        "莱塔尼亚",
+        "独行"
+      ],
+      "image": "/images/operators/地灵.png",
+      "tier": 1
+    },
+    {
+      "name": "折光",
+      "covenants": [
+        "莱塔尼亚"
+      ],
+      "image": "/images/operators/折光.png",
+      "tier": 2
+    },
+    {
+      "name": "蓝毒",
+      "covenants": [
+        "伊比利亚"
+      ],
+      "image": "/images/operators/蓝毒.png",
+      "tier": 2
+    },
+    {
+      "name": "泡泡",
+      "covenants": [
+        "萨尔贡",
+        "坚守"
+      ],
+      "image": "/images/operators/泡泡.png",
+      "tier": 2
+    },
+    {
+      "name": "莎草",
+      "covenants": [
+        "萨尔贡",
+        "聚合"
+      ],
+      "image": "/images/operators/莎草.png",
+      "tier": 2
+    },
+    {
+      "name": "雪猎",
+      "covenants": [
+        "谢拉格",
+        "精准"
+      ],
+      "image": "/images/operators/雪猎.png",
+      "tier": 2
+    },
+    {
+      "name": "砾",
+      "covenants": [
+        "卡西米尔",
+        "不屈"
+      ],
+      "image": "/images/operators/砾.png",
+      "tier": 2
+    },
+    {
+      "name": "复奏",
+      "covenants": [
+        "莱塔尼亚",
+        "叙拉古",
+        "奇迹"
+      ],
+      "image": "/images/operators/复奏.png",
+      "tier": 2
+    },
+    {
+      "name": "奥斯塔",
+      "covenants": [
+        "叙拉古"
+      ],
+      "image": "/images/operators/奥斯塔.png",
+      "tier": 2
+    },
+    {
+      "name": "Miss.Christine",
+      "covenants": [
+        "维多利亚",
+        "奥术"
+      ],
+      "image": "/images/operators/Miss.Christine.png",
+      "tier": 2
+    },
+    {
+      "name": "哈洛德",
+      "covenants": [
+        "维多利亚",
+        "谢拉格"
+      ],
+      "image": "/images/operators/哈洛德.png",
+      "tier": 2
+    },
+    {
+      "name": "云迹",
+      "covenants": [
+        "灵巧",
+        "奇迹"
+      ],
+      "image": "/images/operators/云迹.png",
+      "tier": 2
+    },
+    {
+      "name": "蛇屠箱",
+      "covenants": [
+        "坚守"
+      ],
+      "image": "/images/operators/蛇屠箱.png",
+      "tier": 2
+    },
+    {
+      "name": "波登可",
+      "covenants": [
+        "聚合",
+        "迅捷"
+      ],
+      "image": "/images/operators/波登可.png",
+      "tier": 2
+    },
+    {
+      "name": "承曦格雷伊",
+      "covenants": [
+        "精准",
+        "灵巧"
+      ],
+      "image": "/images/operators/承曦格雷伊.png",
+      "tier": 2
+    },
+    {
+      "name": "锡人",
+      "covenants": [
+        "投资人"
+      ],
+      "image": "/images/operators/锡人.png",
+      "tier": 2
+    },
+    {
+      "name": "宴",
+      "covenants": [
+        "不屈"
+      ],
+      "image": "/images/operators/宴.png",
+      "tier": 2
+    },
+    {
+      "name": "渡桥",
+      "covenants": [
+        "远见"
+      ],
+      "image": "/images/operators/渡桥.png",
+      "tier": 2
+    },
+    {
+      "name": "矩",
+      "covenants": [
+        "炎"
+      ],
+      "image": "/images/operators/矩.png",
+      "tier": 2
+    },
+    {
+      "name": "星极",
+      "covenants": [
+        "奇迹"
+      ],
+      "image": "/images/operators/星极.png",
+      "tier": 2
+    },
+    {
+      "name": "瑰盐",
+      "covenants": [
+        "伊比利亚",
+        "聚合"
+      ],
+      "image": "/images/operators/瑰盐.png",
+      "tier": 2
+    },
+    {
+      "name": "真理",
+      "covenants": [
+        "乌萨斯"
+      ],
+      "image": "/images/operators/真理.png",
+      "tier": 2
+    },
+    {
+      "name": "铸铁",
+      "covenants": [
+        "突袭"
+      ],
+      "image": "/images/operators/铸铁.png",
+      "tier": 2
+    },
+    {
+      "name": "星源",
+      "covenants": [
+        "助力"
+      ],
+      "image": "/images/operators/星源.png",
+      "tier": 2
+    },
+    {
+      "name": "安哲拉",
+      "covenants": [
+        "阿戈尔",
+        "助力"
+      ],
+      "image": "/images/operators/安哲拉.png",
+      "tier": 2
+    },
+    {
+      "name": "车尔尼",
+      "covenants": [
+        "莱塔尼亚",
+        "坚守"
+      ],
+      "image": "/images/operators/车尔尼.png",
+      "tier": 3
+    },
+    {
+      "name": "卡涅利安",
+      "covenants": [
+        "莱塔尼亚",
+        "萨尔贡",
+        "迅捷"
+      ],
+      "image": "/images/operators/卡涅利安.png",
+      "tier": 3
+    },
+    {
+      "name": "乌啾",
+      "covenants": [
+        "乌萨斯",
+        "聚合"
+      ],
+      "image": "/images/operators/乌啾.png",
+      "tier": 3
+    },
+    {
+      "name": "海沫",
+      "covenants": [
+        "伊比利亚",
+        "不屈"
+      ],
+      "image": "/images/operators/海沫.png",
+      "tier": 3
+    },
+    {
+      "name": "旅骨",
+      "covenants": [
+        "伊比利亚",
+        "精准"
+      ],
+      "image": "/images/operators/旅骨.png",
+      "tier": 3
+    },
+    {
+      "name": "风絮",
+      "covenants": [
+        "炎",
+        "聚合"
+      ],
+      "image": "/images/operators/风絮.png",
+      "tier": 3
+    },
+    {
+      "name": "极光",
+      "covenants": [
+        "谢拉格"
+      ],
+      "image": "/images/operators/极光.png",
+      "tier": 3
+    },
+    {
+      "name": "耶拉",
+      "covenants": [
+        "谢拉格",
+        "奇迹"
+      ],
+      "image": "/images/operators/耶拉.png",
+      "tier": 3
+    },
+    {
+      "name": "初雪",
+      "covenants": [
+        "谢拉格",
+        "协防干员"
+      ],
+      "image": "/images/operators/初雪.png",
+      "tier": 3
+    },
+    {
+      "name": "深巡",
+      "covenants": [
+        "阿戈尔",
+        "坚守"
+      ],
+      "image": "/images/operators/深巡.png",
+      "tier": 3
+    },
+    {
+      "name": "斯卡蒂",
+      "covenants": [
+        "阿戈尔",
+        "突袭"
+      ],
+      "image": "/images/operators/斯卡蒂.png",
+      "tier": 3
+    },
+    {
+      "name": "瑕光",
+      "covenants": [
+        "卡西米尔",
+        "突袭"
+      ],
+      "image": "/images/operators/瑕光.png",
+      "tier": 3
+    },
+    {
+      "name": "忍冬",
+      "covenants": [
+        "叙拉古",
+        "迅捷"
+      ],
+      "image": "/images/operators/忍冬.png",
+      "tier": 3
+    },
+    {
+      "name": "伺夜",
+      "covenants": [
+        "叙拉古",
+        "精准"
+      ],
+      "image": "/images/operators/伺夜.png",
+      "tier": 3
+    },
+    {
+      "name": "水灯心",
+      "covenants": [
+        "维多利亚",
+        "独行",
+        "灵巧"
+      ],
+      "image": "/images/operators/水灯心.png",
+      "tier": 3
+    },
+    {
+      "name": "空弦",
+      "covenants": [
+        "精准",
+        "远见"
+      ],
+      "image": "/images/operators/空弦.png",
+      "tier": 3
+    },
+    {
+      "name": "吉星",
+      "covenants": [
+        "奇迹"
+      ],
+      "image": "/images/operators/吉星.png",
+      "tier": 3
+    },
+    {
+      "name": "伊桑",
+      "covenants": [
+        "奥术",
+        "突袭"
+      ],
+      "image": "/images/operators/伊桑.png",
+      "tier": 3
+    },
+    {
+      "name": "罗比菈塔",
+      "covenants": [
+        "坚守",
+        "助力"
+      ],
+      "image": "/images/operators/罗比菈塔.png",
+      "tier": 3
+    },
+    {
+      "name": "乌有",
+      "covenants": [
+        "炎"
+      ],
+      "image": "/images/operators/乌有.png",
+      "tier": 3
+    },
+    {
+      "name": "历阵锐枪芬",
+      "covenants": [
+        "卡西米尔",
+        "远见"
+      ],
+      "image": "/images/operators/历阵锐枪芬.png",
+      "tier": 3
+    },
+    {
+      "name": "凯瑟琳",
+      "covenants": [
+        "维多利亚",
+        "远见"
+      ],
+      "image": "/images/operators/凯瑟琳.png",
+      "tier": 3
+    },
+    {
+      "name": "盟约·辅助干员",
+      "covenants": [
+        "调和"
+      ],
+      "image": "/images/operators/盟约·辅助干员.png",
+      "tier": 3
+    },
+    {
+      "name": "风丸",
+      "covenants": [
+        "不屈"
+      ],
+      "image": "/images/operators/风丸.png",
+      "tier": 3
+    },
+    {
+      "name": "至简",
+      "covenants": [
+        "萨尔贡"
+      ],
+      "image": "/images/operators/至简.png",
+      "tier": 3
+    },
+    {
+      "name": "奥尔佳",
+      "covenants": [
+        "乌萨斯",
+        "灵巧"
+      ],
+      "image": "/images/operators/奥尔佳.png",
+      "tier": 3
+    },
+    {
+      "name": "青枳",
+      "covenants": [
+        "坚守",
+        "迅捷"
+      ],
+      "image": "/images/operators/青枳.png",
+      "tier": 3
+    },
+    {
+      "name": "黑键",
+      "covenants": [
+        "莱塔尼亚",
+        "精准"
+      ],
+      "image": "/images/operators/黑键.png",
+      "tier": 4
+    },
+    {
+      "name": "艾雅法拉",
+      "covenants": [
+        "莱塔尼亚",
+        "奥术"
+      ],
+      "image": "/images/operators/艾雅法拉.png",
+      "tier": 4
+    },
+    {
+      "name": "赫拉格",
+      "covenants": [
+        "乌萨斯",
+        "突袭"
+      ],
+      "image": "/images/operators/赫拉格.png",
+      "tier": 4
+    },
+    {
+      "name": "维伊",
+      "covenants": [
+        "乌萨斯",
+        "奥术"
+      ],
+      "image": "/images/operators/维伊.png",
+      "tier": 4
+    },
+    {
+      "name": "温蒂",
+      "covenants": [
+        "伊比利亚",
+        "坚守"
+      ],
+      "image": "/images/operators/温蒂.png",
+      "tier": 4
+    },
+    {
+      "name": "流明",
+      "covenants": [
+        "伊比利亚",
+        "聚合"
+      ],
+      "image": "/images/operators/流明.png",
+      "tier": 4
+    },
+    {
+      "name": "余",
+      "covenants": [
+        "炎",
+        "坚守"
+      ],
+      "image": "/images/operators/余.png",
+      "tier": 4
+    },
+    {
+      "name": "森蚺",
+      "covenants": [
+        "萨尔贡",
+        "不屈"
+      ],
+      "image": "/images/operators/森蚺.png",
+      "tier": 4
+    },
+    {
+      "name": "灵知",
+      "covenants": [
+        "谢拉格",
+        "迅捷"
+      ],
+      "image": "/images/operators/灵知.png",
+      "tier": 4
+    },
+    {
+      "name": "归溟幽灵鲨",
+      "covenants": [
+        "阿戈尔",
+        "不屈"
+      ],
+      "image": "/images/operators/归溟幽灵鲨.png",
+      "tier": 4
+    },
+    {
+      "name": "水月",
+      "covenants": [
+        "阿戈尔",
+        "灵巧"
+      ],
+      "image": "/images/operators/水月.png",
+      "tier": 4
+    },
+    {
+      "name": "远牙",
+      "covenants": [
+        "卡西米尔",
+        "精准"
+      ],
+      "image": "/images/operators/远牙.png",
+      "tier": 4
+    },
+    {
+      "name": "玛恩纳",
+      "covenants": [
+        "卡西米尔"
+      ],
+      "image": "/images/operators/玛恩纳.png",
+      "tier": 4
+    },
+    {
+      "name": "涤火杰西卡",
+      "covenants": [
+        "维多利亚",
+        "坚守"
+      ],
+      "image": "/images/operators/涤火杰西卡.png",
+      "tier": 4
+    },
+    {
+      "name": "白铁",
+      "covenants": [
+        "维多利亚",
+        "助力"
+      ],
+      "image": "/images/operators/白铁.png",
+      "tier": 4
+    },
+    {
+      "name": "斥罪",
+      "covenants": [
+        "叙拉古",
+        "不屈"
+      ],
+      "image": "/images/operators/斥罪.png",
+      "tier": 4
+    },
+    {
+      "name": "W",
+      "covenants": [
+        "迅捷"
+      ],
+      "image": "/images/operators/W.png",
+      "tier": 4
+    },
+    {
+      "name": "霍尔海雅",
+      "covenants": [
+        "奥术",
+        "精准"
+      ],
+      "image": "/images/operators/霍尔海雅.png",
+      "tier": 4
+    },
+    {
+      "name": "山",
+      "covenants": [
+        "投资人"
+      ],
+      "image": "/images/operators/山.png",
+      "tier": 4
+    },
+    {
+      "name": "淬羽赫默",
+      "covenants": [
+        "助力"
+      ],
+      "image": "/images/operators/淬羽赫默.png",
+      "tier": 4
+    },
+    {
+      "name": "赫德雷",
+      "covenants": [
+        "突袭"
+      ],
+      "image": "/images/operators/赫德雷.png",
+      "tier": 4
+    },
+    {
+      "name": "夜莺",
+      "covenants": [
+        "聚合",
+        "协防干员"
+      ],
+      "image": "/images/operators/夜莺.png",
+      "tier": 4
+    },
+    {
+      "name": "仇白",
+      "covenants": [
+        "炎",
+        "灵巧"
+      ],
+      "image": "/images/operators/仇白.png",
+      "tier": 4
+    },
+    {
+      "name": "异客",
+      "covenants": [
+        "萨尔贡",
+        "奥术"
+      ],
+      "image": "/images/operators/异客.png",
+      "tier": 4
+    },
+    {
+      "name": "安洁莉娜",
+      "covenants": [
+        "叙拉古",
+        "奇迹"
+      ],
+      "image": "/images/operators/安洁莉娜.png",
+      "tier": 4
+    },
+    {
+      "name": "华法琳",
+      "covenants": [
+        "灵巧",
+        "聚合"
+      ],
+      "image": "/images/operators/华法琳.png",
+      "tier": 4
+    },
+    {
+      "name": "寒檀",
+      "covenants": [
+        "远见"
+      ],
+      "image": "/images/operators/寒檀.png",
+      "tier": 4
+    },
+    {
+      "name": "纯烬艾雅法拉",
+      "covenants": [
+        "聚合",
+        "莱塔尼亚",
+        "远见"
+      ],
+      "image": "/images/operators/纯烬艾雅法拉.png",
+      "tier": 5
+    },
+    {
+      "name": "怒潮凛冬",
+      "covenants": [
+        "乌萨斯",
+        "奇迹"
+      ],
+      "image": "/images/operators/怒潮凛冬.png",
+      "tier": 5
+    },
+    {
+      "name": "艾丽妮",
+      "covenants": [
+        "伊比利亚"
+      ],
+      "image": "/images/operators/艾丽妮.png",
+      "tier": 5
+    },
+    {
+      "name": "棘刺",
+      "covenants": [
+        "伊比利亚",
+        "奥术"
+      ],
+      "image": "/images/operators/棘刺.png",
+      "tier": 5
+    },
+    {
+      "name": "黍",
+      "covenants": [
+        "炎",
+        "远见"
+      ],
+      "image": "/images/operators/黍.png",
+      "tier": 5
+    },
+    {
+      "name": "佩佩",
+      "covenants": [
+        "萨尔贡",
+        "灵巧"
+      ],
+      "image": "/images/operators/佩佩.png",
+      "tier": 5
+    },
+    {
+      "name": "圣聆初雪",
+      "covenants": [
+        "谢拉格",
+        "奥术"
+      ],
+      "image": "/images/operators/圣聆初雪.png",
+      "tier": 5
+    },
+    {
+      "name": "凛御银灰",
+      "covenants": [
+        "谢拉格",
+        "灵巧",
+        "投资人"
+      ],
+      "image": "/images/operators/凛御银灰.png",
+      "tier": 5
+    },
+    {
+      "name": "歌蕾蒂娅",
+      "covenants": [
+        "阿戈尔"
+      ],
+      "image": "/images/operators/歌蕾蒂娅.png",
+      "tier": 5
+    },
+    {
+      "name": "乌尔比安",
+      "covenants": [
+        "阿戈尔"
+      ],
+      "image": "/images/operators/乌尔比安.png",
+      "tier": 5
+    },
+    {
+      "name": "薇薇安娜",
+      "covenants": [
+        "莱塔尼亚",
+        "卡西米尔",
+        "奥术"
+      ],
+      "image": "/images/operators/薇薇安娜.png",
+      "tier": 5
+    },
+    {
+      "name": "铃兰",
+      "covenants": [
+        "叙拉古"
+      ],
+      "image": "/images/operators/铃兰.png",
+      "tier": 5
+    },
+    {
+      "name": "贝洛内",
+      "covenants": [
+        "叙拉古",
+        "突袭"
+      ],
+      "image": "/images/operators/贝洛内.png",
+      "tier": 5
+    },
+    {
+      "name": "维娜·维多利亚",
+      "covenants": [
+        "维多利亚",
+        "奇迹"
+      ],
+      "image": "/images/operators/维娜·维多利亚.png",
+      "tier": 5
+    },
+    {
+      "name": "迷迭香",
+      "covenants": [
+        "精准",
+        "助力"
+      ],
+      "image": "/images/operators/迷迭香.png",
+      "tier": 5
+    },
+    {
+      "name": "隐德来希",
+      "covenants": [
+        "灵巧",
+        "不屈"
+      ],
+      "image": "/images/operators/隐德来希.png",
+      "tier": 5
+    },
+    {
+      "name": "塞雷娅",
+      "covenants": [
+        "坚守",
+        "协防干员"
+      ],
+      "image": "/images/operators/塞雷娅.png",
+      "tier": 5
+    },
+    {
+      "name": "溯光星源",
+      "covenants": [
+        "奥术"
+      ],
+      "image": "/images/operators/溯光星源.png",
+      "tier": 5
+    },
+    {
+      "name": "老鲤",
+      "covenants": [
+        "投资人",
+        "炎"
+      ],
+      "image": "/images/operators/老鲤.png",
+      "tier": 5
+    },
+    {
+      "name": "Mon3tr",
+      "covenants": [
+        "协防干员"
+      ],
+      "image": "/images/operators/Mon3tr.png",
+      "tier": 5
+    },
+    {
+      "name": "可露希尔",
+      "covenants": [
+        "投资人"
+      ],
+      "image": "/images/operators/可露希尔.png",
+      "tier": 5
+    },
+    {
+      "name": "“暴躁铁皮”",
+      "covenants": [
+        "协防干员"
+      ],
+      "image": "/images/operators/“暴躁铁皮”.png",
+      "tier": 5
+    },
+    {
+      "name": "鸿雪",
+      "covenants": [
+        "萨尔贡",
+        "精准"
+      ],
+      "image": "/images/operators/鸿雪.png",
+      "tier": 5
+    },
+    {
+      "name": "焰尾",
+      "covenants": [
+        "卡西米尔",
+        "迅捷"
+      ],
+      "image": "/images/operators/焰尾.png",
+      "tier": 5
+    },
+    {
+      "name": "冻河",
+      "covenants": [
+        "乌萨斯",
+        "迅捷"
+      ],
+      "image": "/images/operators/冻河.png",
+      "tier": 5
+    },
+    {
+      "name": "阿米娅",
+      "covenants": [
+        "奇迹"
+      ],
+      "image": "/images/operators/阿米娅.png",
+      "tier": 5
+    },
+    {
+      "name": "引星棘刺",
+      "covenants": [
+        "伊比利亚",
+        "迅捷"
+      ],
+      "image": "/images/operators/引星棘刺.png",
+      "tier": 6
+    },
+    {
+      "name": "烛煌",
+      "covenants": [
+        "炎",
+        "维多利亚",
+        "迅捷"
+      ],
+      "image": "/images/operators/烛煌.png",
+      "tier": 6
+    },
+    {
+      "name": "浊心斯卡蒂",
+      "covenants": [
+        "阿戈尔",
+        "聚合"
+      ],
+      "image": "/images/operators/浊心斯卡蒂.png",
+      "tier": 6
+    },
+    {
+      "name": "克莱门莎",
+      "covenants": [
+        "阿戈尔"
+      ],
+      "image": "/images/operators/克莱门莎.png",
+      "tier": 6
+    },
+    {
+      "name": "耀骑士临光",
+      "covenants": [
+        "卡西米尔",
+        "突袭"
+      ],
+      "image": "/images/operators/耀骑士临光.png",
+      "tier": 6
+    },
+    {
+      "name": "荒芜拉普兰德",
+      "covenants": [
+        "叙拉古"
+      ],
+      "image": "/images/operators/荒芜拉普兰德.png",
+      "tier": 6
+    },
+    {
+      "name": "酒神",
+      "covenants": [
+        "维多利亚"
+      ],
+      "image": "/images/operators/酒神.png",
+      "tier": 6
+    },
+    {
+      "name": "逻各斯",
+      "covenants": [
+        "奥术",
+        "远见"
+      ],
+      "image": "/images/operators/逻各斯.png",
+      "tier": 6
+    },
+    {
+      "name": "真言",
+      "covenants": [
+        "萨尔贡"
+      ],
+      "image": "/images/operators/真言.png",
+      "tier": 6
+    },
+    {
+      "name": "妮芙",
+      "covenants": [
+        "迅捷",
+        "远见"
+      ],
+      "image": "/images/operators/妮芙.png",
+      "tier": 6
+    },
+    {
+      "name": "遥",
+      "covenants": [
+        "聚合",
+        "奇迹"
+      ],
+      "image": "/images/operators/遥.png",
+      "tier": 6
+    },
+    {
+      "name": "魔王",
+      "covenants": [
+        "调和"
+      ],
+      "image": "/images/operators/魔王.png",
+      "tier": 6
+    },
+    {
+      "name": "史尔特尔",
+      "covenants": [
+        "突袭",
+        "不屈"
+      ],
+      "image": "/images/operators/史尔特尔.png",
+      "tier": 6
+    },
+    {
+      "name": "锏",
+      "covenants": [
+        "卡西米尔",
+        "谢拉格",
+        "莱塔尼亚"
+      ],
+      "image": "/images/operators/锏.png",
+      "tier": 6
+    },
+    {
+      "name": "机械师",
+      "covenants": [
+        "协防干员",
+        "坚守"
+      ],
+      "image": "/images/operators/机械师.png",
+      "tier": 6
+    },
+    {
+      "name": "塔露拉",
+      "covenants": [
+        "乌萨斯",
+        "奥术",
+        "协防干员"
+      ],
+      "image": "/images/operators/塔露拉.png",
+      "tier": 6
+    },
+    {
+      "name": "夕",
+      "covenants": [
+        "炎",
+        "奥术"
+      ],
+      "image": "/images/operators/夕.png",
+      "tier": 6
+    },
+    {
+      "name": "蕾缪安",
+      "covenants": [
+        "精准"
+      ],
+      "image": "/images/operators/蕾缪安.png",
+      "tier": 6
+    },
+    {
+      "name": "缪尔赛思",
+      "covenants": [
+        "协防干员"
+      ],
+      "image": "/images/operators/缪尔赛思.png",
+      "tier": 6
+    },
+    {
+      "name": "帕拉斯",
+      "covenants": [
+        "灵巧",
+        "助力"
+      ],
+      "image": "/images/operators/帕拉斯.png",
+      "tier": 6
+    }
+  ],
+  "covenants": [
+    {
+      "name": "乌萨斯",
+      "logo": "/images/covenants/乌萨斯.png",
+      "kind": "primary"
+    },
+    {
+      "name": "不屈",
+      "logo": "/images/covenants/不屈.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "萨尔贡",
+      "logo": "/images/covenants/萨尔贡.png",
+      "kind": "primary"
+    },
+    {
+      "name": "独行",
+      "logo": "/images/covenants/独行.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "阿戈尔",
+      "logo": "/images/covenants/阿戈尔.png",
+      "kind": "primary"
+    },
+    {
+      "name": "卡西米尔",
+      "logo": "/images/covenants/卡西米尔.png",
+      "kind": "primary"
+    },
+    {
+      "name": "助力",
+      "logo": "/images/covenants/助力.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "维多利亚",
+      "logo": "/images/covenants/维多利亚.png",
+      "kind": "primary"
+    },
+    {
+      "name": "谢拉格",
+      "logo": "/images/covenants/谢拉格.png",
+      "kind": "primary"
+    },
+    {
+      "name": "坚守",
+      "logo": "/images/covenants/坚守.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "精准",
+      "logo": "/images/covenants/精准.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "伊比利亚",
+      "logo": "/images/covenants/伊比利亚.png",
+      "kind": "primary"
+    },
+    {
+      "name": "奥术",
+      "logo": "/images/covenants/奥术.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "突袭",
+      "logo": "/images/covenants/突袭.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "灵巧",
+      "logo": "/images/covenants/灵巧.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "炎",
+      "logo": "/images/covenants/炎.png",
+      "kind": "primary"
+    },
+    {
+      "name": "聚合",
+      "logo": "/images/covenants/聚合.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "迅捷",
+      "logo": "/images/covenants/迅捷.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "叙拉古",
+      "logo": "/images/covenants/叙拉古.png",
+      "kind": "primary"
+    },
+    {
+      "name": "莱塔尼亚",
+      "logo": "/images/covenants/莱塔尼亚.png",
+      "kind": "primary"
+    },
+    {
+      "name": "奇迹",
+      "logo": "/images/covenants/奇迹.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "投资人",
+      "logo": "/images/covenants/投资人.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "远见",
+      "logo": "/images/covenants/远见.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "协防干员",
+      "logo": "/images/covenants/协防干员.png",
+      "kind": "secondary"
+    },
+    {
+      "name": "调和",
+      "logo": "/images/covenants/调和.png",
+      "kind": "secondary"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "title": "选择卫戍协议助手的页面方向",
+  "question": "规则已确认：主盟约优先。下面选择界面，之后直接完成实现。",
+  "options": [
+    {
+      "id": "album",
+      "kind": "assigned",
+      "label": "靛蓝图鉴",
+      "kicker": "THE ROLL",
+      "thesis": "深靛蓝工作区配紧凑头像名录，Ban 变化直接标在干员上。",
+      "palette": [
+        "#151d2e",
+        "#202d43",
+        "#b5c9ef",
+        "#e5a5a9"
+      ],
+      "materials": [
+        "哑光图鉴封面",
+        "清晰中文无衬线"
+      ],
+      "viewport": "左侧 Ban 盟约，右侧筛选与头像名录；可用与禁用数量始终可见。",
+      "risk": "暗色在户外强光下不如浅色易读。",
+      "html": ".impeccable/mocks/decision/album.html",
+      "raised": [
+        {
+          "from": "参考书中轴",
+          "raise": "说明不挤占主任务，判定理由贴近每名干员。"
+        },
+        {
+          "from": "定向越野图",
+          "raise": "筛选与 Ban 状态严格分色，不混淆选择含义。"
+        },
+        {
+          "from": "登机牌",
+          "raise": "改变状态保留干员位置，便于比较。"
+        },
+        {
+          "from": "车站翻牌",
+          "raise": "数字与状态列稳定对齐，不做装饰翻转。"
+        }
+      ]
+    },
+    {
+      "id": "index",
+      "kind": "pick",
+      "label": "清爽名录",
+      "kicker": "IMPECCABLE’S PICK",
+      "thesis": "浅蓝灰底、深蓝标题、白色名录，优先长时间查询。",
+      "palette": [
+        "#f0f3f7",
+        "#ffffff",
+        "#264e78",
+        "#ad3e4c"
+      ],
+      "materials": [
+        "设定集目录",
+        "清晰中文无衬线"
+      ],
+      "viewport": "左侧紧凑 Ban 面板，右侧干员卡片；等级与盟约筛选在列表上方。",
+      "risk": "最熟悉也最常见的工具型布局，个性较克制。",
+      "html": ".impeccable/mocks/decision/index.html"
+    },
+    {
+      "id": "catalog",
+      "kind": "challenger",
+      "catalogId": "pop-culture-shelf-doujin-event-catalog",
+      "label": "高密度图录",
+      "verdict": "competitive",
+      "thesis": "以更紧密的头像网格一次展示更多干员。",
+      "palette": [
+        "#f4f4ef",
+        "#202424",
+        "#536b4f"
+      ],
+      "materials": [
+        "同人展图录",
+        "方形缩略图"
+      ],
+      "viewport": "顶部设置 Ban，下方是分等级的紧凑干员网格。",
+      "case": "玩家熟悉图鉴密度，但长名称和被禁理由需要更多空间。",
+      "risk": "视觉扫描更快，阅读详细原因更慢。",
+      "html": ".impeccable/mocks/decision/catalog.html",
+      "board": "https://impeccable.style/worlds/cards/pop-culture-shelf-doujin-event-catalog.webp",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-doujin-event-catalog-hero.webp"
+    },
+    {
+      "id": "rw-centre-rail-reference-setting",
+      "kind": "challenger",
+      "catalogId": "rw-centre-rail-reference-setting",
+      "label": "参考书中轴",
+      "verdict": "declined",
+      "thesis": "阅读感强，但窄双栏不利于头像和筛选。",
+      "palette": [
+        "#ebe7dd",
+        "#232323",
+        "#b94d3c"
+      ],
+      "materials": [
+        "仅取信息组织纪律"
+      ],
+      "viewport": "标准 Ban 设置与干员名单。",
+      "case": "阅读感强，但窄双栏不利于头像和筛选。",
+      "kept": "判定说明紧贴对象。",
+      "risk": "不采用来源物件的装饰或导航。"
+    },
+    {
+      "id": "notation-diagram-systems-orienteering-map",
+      "kind": "challenger",
+      "catalogId": "notation-diagram-systems-orienteering-map",
+      "label": "定向越野图",
+      "verdict": "declined",
+      "thesis": "路线关系并非本产品事实，地图不能替代名单。",
+      "palette": [
+        "#fff",
+        "#637351",
+        "#785098"
+      ],
+      "materials": [
+        "仅取信息组织纪律"
+      ],
+      "viewport": "标准 Ban 设置与干员名单。",
+      "case": "路线关系并非本产品事实，地图不能替代名单。",
+      "kept": "状态分色严守含义。",
+      "risk": "不采用来源物件的装饰或导航。"
+    },
+    {
+      "id": "digital-design-canon-dark-first-developer-console",
+      "kind": "challenger",
+      "catalogId": "digital-design-canon-dark-first-developer-console",
+      "label": "石墨工作台",
+      "verdict": "declined",
+      "thesis": "可用但技术工具气质弱于玩家图鉴，清晰度没有提升。",
+      "palette": [
+        "#202126",
+        "#31333c",
+        "#a8bcdf"
+      ],
+      "materials": [
+        "仅取信息组织纪律"
+      ],
+      "viewport": "标准 Ban 设置与干员名单。",
+      "case": "可用但技术工具气质弱于玩家图鉴，清晰度没有提升。",
+      "kept": "控件密度和反馈一致。",
+      "risk": "不采用来源物件的装饰或导航。"
+    },
+    {
+      "id": "vernacular-ephemera-boarding-pass-and-gate-board",
+      "kind": "challenger",
+      "catalogId": "vernacular-ephemera-boarding-pass-and-gate-board",
+      "label": "登机名录",
+      "verdict": "declined",
+      "thesis": "行列清晰但玩家认同弱，旅行比喻没有必要。",
+      "palette": [
+        "#f2f3f3",
+        "#223140",
+        "#c86452"
+      ],
+      "materials": [
+        "仅取信息组织纪律"
+      ],
+      "viewport": "标准 Ban 设置与干员名单。",
+      "case": "行列清晰但玩家认同弱，旅行比喻没有必要。",
+      "kept": "变更保留对象位置。",
+      "risk": "不采用来源物件的装饰或导航。"
+    },
+    {
+      "id": "signals-instruments-split-flap-concourse",
+      "kind": "challenger",
+      "catalogId": "signals-instruments-split-flap-concourse",
+      "label": "车站翻牌",
+      "verdict": "declined",
+      "thesis": "大字符占地且动效打扰查询。",
+      "palette": [
+        "#202322",
+        "#d8d8cf",
+        "#c88f38"
+      ],
+      "materials": [
+        "仅取信息组织纪律"
+      ],
+      "viewport": "标准 Ban 设置与干员名单。",
+      "case": "大字符占地且动效打扰查询。",
+      "kept": "状态和数值稳定对齐。",
+      "risk": "不采用来源物件的装饰或导航。"
+    }
+  ],
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "标准工具界面",
+    "thesis": "朴素白底、蓝色按钮、表格名单。",
+    "palette": [
+      "#fff",
+      "#1f2937",
+      "#2563eb"
+    ],
+    "materials": [
+      "标准表单"
+    ],
+    "viewport": "Ban 复选项和可筛选表格。",
+    "risk": "没有特别的视觉辨识度。",
+    "html": ".impeccable/mocks/decision/canon.html"
+  },
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "steer": true,
+  "buildPath": {
+    "value": "code",
+    "toggle": false
+  }
+}
