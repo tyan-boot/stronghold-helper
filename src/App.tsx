@@ -1,7 +1,10 @@
 import { useState } from 'react'
+import { Button } from '@base-ui/react/button'
+import { Switch } from '@base-ui/react/switch'
+import { Toggle } from '@base-ui/react/toggle'
+import CovenantButton from './CovenantButton'
 import OperatorCard from './OperatorCard'
 import { catalog, filterRoster, rulesSource, tierLabels, type StatusFilter } from './roster'
-import './App.css'
 
 const statusOptions = [
   { value: 'all', label: '全部' },
@@ -60,139 +63,137 @@ function App() {
 
   return (
     <>
-      <a className="skip-link" href="#operators">跳转到干员列表</a>
-      <header className="site-header">
-        <div className="site-heading">
-          <svg className="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <a className="absolute -top-20 left-4 z-10 bg-surface px-4.5 py-2.5 focus:top-3" href="#operators">跳转到干员列表</a>
+      <header className="flex min-h-20 items-center justify-between gap-6 border-b border-[#cbd3c2] bg-[#e9ede2] px-[max(32px,calc((100%_-_1344px)/2))] py-5 tablet:px-6 mobile:min-h-[68px] mobile:gap-3 mobile:p-4">
+        <div className="flex items-center gap-3.5 mobile:gap-[9px]">
+          <svg className="size-7 text-accent mobile:size-[23px]" viewBox="0 0 32 32" fill="none" aria-hidden="true">
             <rect x="3" y="3" width="10" height="10" rx="1" />
             <rect x="19" y="3" width="10" height="10" rx="1" />
             <rect x="3" y="19" width="10" height="10" rx="1" />
             <path d="M19 24h10m-5-5v10" />
           </svg>
-          <h1>卫戍协议助手</h1>
-          <span className="edition">规程 · 干员图录</span>
+          <h1 className="text-[22px] font-bold tracking-[-.02em] mobile:text-[18px]">卫戍协议助手</h1>
+          <span className="ml-1.5 border-l border-[#b9c4af] pl-5 text-[13px] text-[#58644e] tablet:hidden">规程 · 干员图录</span>
         </div>
-        <a className="source-link" href={catalog.source} target="_blank" rel="noreferrer">
+        <a className="inline-flex items-center gap-2 text-[13px] no-underline mobile:gap-[3px] mobile:text-[11px] narrow:text-[10px]" href={catalog.source} target="_blank" rel="noreferrer">
           PRTS 数据来源
-          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" /></svg>
+          <svg className="size-4 mobile:size-3.5" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10" /></svg>
         </a>
       </header>
 
-      <main>
-        <section className="ban-panel" aria-labelledby="ban-title">
-          <div className="section-heading">
+      <main className="mx-auto max-w-[1408px] px-8 pt-[30px] pb-12 tablet:p-6 mobile:px-3.5 mobile:pt-4.5 mobile:pb-8">
+        <section className="rounded-md border border-line bg-surface px-[26px] pt-6 tablet:px-5 tablet:pt-5 mobile:px-3.5 mobile:pt-4" aria-labelledby="ban-title">
+          <div className="mb-6 flex items-start justify-between gap-5 mobile:relative mobile:mb-4.5 mobile:block">
             <div>
-              <h2 id="ban-title">设置 Ban 位 <span className="selection-count">已选 {bans.size}</span></h2>
-              <p>点选本局禁用的盟约，再次点击取消。干员状态实时更新。</p>
+              <h2 className="flex items-center gap-3 text-[20px] font-[650] mobile:gap-2 mobile:text-[18px]" id="ban-title">设置 Ban 位 <span className="rounded-[3px] bg-surface-soft px-2 text-[12px] leading-[1.8] font-medium text-accent tabular-nums mobile:px-1.5 mobile:text-[11px]">已选 {bans.size}</span></h2>
+              <p className="mt-1.5 text-[13px] text-muted mobile:mt-[9px] mobile:max-w-[25ch] mobile:text-[12px]">点选本局禁用的盟约，再次点击取消。干员状态实时更新。</p>
             </div>
-            <button className="quiet-button" onClick={() => setBans(new Set())} disabled={bans.size === 0}>
-              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 7a6 6 0 1 1-.4 5M4 3v4h4" /></svg>
+            <Button
+              className="inline-flex min-h-9 items-center justify-center gap-[7px] rounded-sm border border-line bg-surface px-2.5 py-[5px] text-[13px] whitespace-nowrap enabled:hover:border-danger enabled:hover:bg-danger-soft enabled:hover:text-danger disabled:bg-[#f7f8f5] mobile:absolute mobile:-top-0.5 mobile:right-0 mobile:border-0 mobile:px-1 mobile:text-[11px] narrow:static narrow:mt-2"
+              onClick={() => setBans(new Set())} disabled={bans.size === 0}
+            >
+              <svg className="size-4 mobile:size-3.5" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 7a6 6 0 1 1-.4 5M4 3v4h4" /></svg>
               清空 Ban
-            </button>
+            </Button>
           </div>
 
           {[
             { kind: 'primary', label: '核心盟约' },
             { kind: 'secondary', label: '附加盟约' },
           ].map((group) => (
-            <div className="covenant-group" role="group" aria-label={`${group.label} Ban 设置`} key={group.kind}>
-              <div className="group-heading"><h3>{group.label}</h3></div>
-              <div className="covenant-buttons">
+            <div className="mb-4 grid grid-cols-[78px_1fr] items-start gap-3 tablet:grid-cols-[68px_1fr] tablet:gap-2 mobile:block" role="group" aria-label={`${group.label} Ban 设置`} key={group.kind}>
+              <div className="pt-1 mobile:flex mobile:items-center mobile:gap-2 mobile:pt-0 mobile:pb-2"><h3 className="text-[13px] font-[650]">{group.label}</h3></div>
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(60px,1fr))] gap-1">
                 {catalog.covenants.filter((item) => item.kind === group.kind).map((item) => (
-                  <button
+                  <CovenantButton
                     key={item.name}
-                    className="covenant-button"
-                    aria-pressed={bans.has(item.name)}
-                    aria-label={`${item.name}，${bans.has(item.name) ? '已 Ban，点击取消' : '点击 Ban'}`}
-                    onClick={() => toggleBan(item.name, item.kind)}
-                  >
-                    <span className="covenant-icon"><img src={item.logo} alt="" width="40" height="40" /></span>
-                    <span className="covenant-name">{item.name}</span>
-                    <svg className="ban-mark" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                      <circle cx="8" cy="8" r="5.5" /><path d="m4 4 8 8" />
-                    </svg>
-                  </button>
+                    covenant={item}
+                    variant="ban"
+                    pressed={bans.has(item.name)}
+                    onPressedChange={() => toggleBan(item.name, item.kind)}
+                  />
                 ))}
               </div>
             </div>
           ))}
         </section>
 
-        <section className="roster-section" id="operators" aria-labelledby="roster-title" tabIndex={-1}>
-          <div className="roster-heading">
-            <div className="roster-title"><h2 id="roster-title">干员一览</h2><span>{catalog.operators.length} 名干员</span></div>
-            <p>等级为卫戍协议等阶，非干员星级</p>
+        <section className="mt-8 scroll-mt-5 mobile:mt-[26px]" id="operators" aria-labelledby="roster-title" tabIndex={-1}>
+          <div className="mb-[15px] flex items-center justify-between gap-3 mobile:mb-2.5 mobile:flex-col mobile:items-start mobile:gap-1">
+            <div className="flex items-baseline gap-3"><h2 className="text-[20px] font-[650] mobile:text-[18px]" id="roster-title">干员一览</h2><span className="text-[12px] text-muted mobile:text-[11px]">{catalog.operators.length} 名干员</span></div>
+            <p className="text-[12px] text-muted mobile:text-[11px]">等级为卫戍协议等阶，非干员星级</p>
           </div>
 
-          <div className="status-filters" role="group" aria-label="按干员状态筛选">
+          <div className="flex gap-6 border-b border-line mobile:justify-between mobile:gap-1.5" role="group" aria-label="按干员状态筛选">
             {statusOptions.map((option) => (
-              <button
-                className={`status-filter status-${option.value}`}
+              <Toggle
+                className="group relative flex min-h-[43px] items-center gap-2 border-0 bg-transparent px-0.5 pt-1.5 pb-3 text-[14px] text-muted hover:text-ink data-pressed:font-[650] data-pressed:text-accent data-pressed:after:absolute data-pressed:after:inset-x-0 data-pressed:after:-bottom-px data-pressed:after:h-0.5 data-pressed:after:bg-current data-pressed:after:content-[''] data-[status=banned]:data-pressed:text-danger data-[status=uncertain]:data-pressed:text-warning mobile:min-h-11 mobile:gap-[5px] mobile:text-[13px] narrow:gap-[3px] narrow:text-[12px]"
                 key={option.value}
-                aria-pressed={status === option.value}
-                onClick={() => setStatus(option.value)}
+                data-status={option.value}
+                pressed={status === option.value}
+                onPressedChange={() => setStatus(option.value)}
               >
-                {option.label}<span>{counts[option.value]}</span>
-              </button>
+                {option.label}<span className="min-w-[26px] rounded-[3px] bg-[#e8ebe2] px-1.5 text-[12px] tabular-nums group-data-pressed:bg-accent group-data-pressed:text-white group-data-[status=banned]:group-data-pressed:bg-danger group-data-[status=uncertain]:group-data-pressed:bg-warning mobile:min-w-[22px] mobile:px-[5px] mobile:text-[11px]">{counts[option.value]}</span>
+              </Toggle>
             ))}
           </div>
 
-          <div className="filter-bar">
-            <div className="tier-filter" role="group" aria-label="按等级筛选">
-              <span className="filter-label">等级</span>
+          <div className="flex flex-wrap items-center gap-x-7 gap-y-3 border-b border-line py-4 mobile:gap-2.5 mobile:py-3">
+            <div className="flex items-center gap-[5px] mobile:w-full mobile:justify-between mobile:gap-0.5" role="group" aria-label="按等级筛选">
+              <span className="mr-2 text-[12px] text-muted mobile:mr-1">等级</span>
               {[0, 1, 2, 3, 4, 5, 6].map((value) => (
-                <button key={value} aria-pressed={tier === value} onClick={() => setTier(value)} aria-label={value === 0 ? '全部等级' : `${value} 阶`}>
+                <Toggle
+                  className="min-h-[34px] min-w-[35px] rounded-[3px] border border-transparent bg-transparent px-2.5 py-1 hover:bg-surface-soft data-pressed:border-[#98a98b] data-pressed:bg-accent-soft data-pressed:font-semibold data-pressed:text-accent mobile:min-h-10 mobile:min-w-[33px] mobile:px-2"
+                  key={value} pressed={tier === value} onPressedChange={() => setTier(value)} aria-label={value === 0 ? '全部等级' : `${value} 阶`}
+                >
                   {value === 0 ? '全部' : tierLabels[value - 1]}
-                </button>
+                </Toggle>
               ))}
             </div>
-            <div className="covenant-filter" role="group" aria-label="按盟约筛选">
-              <div className="covenant-filter-heading">
-                <button className="reset-filters" onClick={clearFilters} disabled={!hasFilters}>重置筛选</button>
+            <div className="w-full" role="group" aria-label="按盟约筛选">
+              <div className="mb-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[12px] text-muted">
+                <Button className="ml-auto min-h-[34px] border-0 bg-transparent py-1 pl-3 text-[12px] text-accent enabled:hover:underline enabled:hover:underline-offset-4 disabled:text-[#747c70] mobile:min-h-10" onClick={clearFilters} disabled={!hasFilters}>重置筛选</Button>
               </div>
-              <div className="covenant-filter-toggles">
+              <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] text-muted">
                 <span>禁用已 Ban：</span>
                 {[
                   { kind: 'primary', label: '核心盟约' },
                   { kind: 'secondary', label: '附加盟约' },
                 ].map((group) => (
-                  <button
+                  <Switch.Root
                     key={group.kind}
-                    className="ban-filter-switch"
-                    role="switch"
+                    className="group inline-flex min-h-11 items-center gap-1.5 border-0 bg-transparent py-1 text-[12px] text-ink hover:text-accent"
+                    render={<button type="button" />}
+                    nativeButton
                     aria-label={`禁用已 Ban 的${group.label}筛选按钮`}
-                    aria-checked={disableBannedKinds.includes(group.kind)}
-                    onClick={() => toggleBannedFilters(group.kind, !disableBannedKinds.includes(group.kind))}
+                    checked={disableBannedKinds.includes(group.kind)}
+                    onCheckedChange={(checked) => toggleBannedFilters(group.kind, checked)}
                   >
-                    <span className="switch-track" aria-hidden="true" />
+                    <span className="h-4 w-7 shrink-0 rounded-2xl border border-[#85957a] bg-line group-data-checked:border-accent group-data-checked:bg-accent" aria-hidden="true">
+                      <Switch.Thumb className="m-px block size-3 rounded-full bg-surface data-checked:translate-x-3" />
+                    </span>
                     {group.label}
-                  </button>
+                  </Switch.Root>
                 ))}
               </div>
               {[
                 { kind: 'primary', label: '核心盟约' },
                 { kind: 'secondary', label: '附加盟约' },
               ].map((group) => (
-                <div className="covenant-group" role="group" aria-label={`${group.label}筛选`} key={group.kind}>
-                  <div className="group-heading"><h3>{group.label}</h3></div>
-                  <div className="covenant-buttons">
+                <div className="mb-4 grid grid-cols-[78px_1fr] items-start gap-3 tablet:grid-cols-[68px_1fr] tablet:gap-2 mobile:block" role="group" aria-label={`${group.label}筛选`} key={group.kind}>
+                  <div className="pt-1 mobile:flex mobile:items-center mobile:gap-2 mobile:pt-0 mobile:pb-2"><h3 className="text-[13px] font-[650]">{group.label}</h3></div>
+                  <div className="grid grid-cols-[repeat(auto-fill,minmax(60px,1fr))] gap-1">
                     {catalog.covenants.filter((item) => item.kind === group.kind).map((item) => (
-                      <button
+                      <CovenantButton
                         key={item.name}
-                        className="covenant-button covenant-filter-button"
+                        covenant={item}
+                        variant="filter"
                         disabled={disableBannedKinds.includes(group.kind) && bans.has(item.name)}
-                        aria-pressed={covenants.includes(item.name)}
-                        aria-label={`${item.name}，${covenants.includes(item.name) ? '已选，点击取消' : '点击筛选'}`}
-                        onClick={() => setCovenants((current) => current.includes(item.name)
+                        pressed={covenants.includes(item.name)}
+                        onPressedChange={() => setCovenants((current) => current.includes(item.name)
                           ? current.filter((name) => name !== item.name)
                           : [...current, item.name])}
-                      >
-                        <span className="covenant-icon"><img src={item.logo} alt="" width="40" height="40" /></span>
-                        <span className="covenant-name">{item.name}</span>
-                        <svg className="filter-mark" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                          <path d="m4 8 3 3 5-6" />
-                        </svg>
-                      </button>
+                      />
                     ))}
                   </div>
                 </div>
@@ -200,30 +201,30 @@ function App() {
             </div>
           </div>
 
-          <div className="results-summary" role="status" aria-live="polite" aria-atomic="true">
-            <span>显示 <strong>{visibleOperators.length}</strong> / {catalog.operators.length} 名干员</span>
+          <div className="flex justify-between gap-3 py-[15px] text-[12px] text-muted tabular-nums mobile:flex-col mobile:gap-0.5 mobile:py-3 mobile:text-[11px]" role="status" aria-live="polite" aria-atomic="true">
+            <span>显示 <strong className="font-semibold text-ink">{visibleOperators.length}</strong> / {catalog.operators.length} 名干员</span>
             <span>{bans.size === 0 ? '尚未设置 Ban，所有干员均可用' : `当前筛选：${counts.available} 可用 · ${counts.banned} 已 Ban · ${counts.uncertain} 待核实`}</span>
           </div>
 
           {visibleOperators.length > 0 ? (
-            <ul className="operator-grid">
+            <ul className="grid grid-cols-8 items-stretch gap-x-3 gap-y-3.5 compact:grid-cols-6 tablet:grid-cols-5 mobile:grid-cols-3 mobile:gap-x-2 mobile:gap-y-2.5">
               {visibleOperators.map((operator) => <OperatorCard key={operator.name} operator={operator} bans={bans} />)}
             </ul>
           ) : (
-            <div className="empty-state">
-              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="7" y="5" width="26" height="30" rx="3" /><path d="M13 14h14m-14 6h14m-14 6h7" /></svg>
-              <h3>{status === 'banned' && bans.size === 0 ? '还没有干员被 Ban' : '没有符合条件的干员'}</h3>
-              <p>{status === 'banned' && bans.size === 0 ? '在上方点选盟约，即可查看受影响的干员。' : '试试其他等级、盟约或状态；重置筛选不会清除 Ban。'}</p>
-              <button className="primary-button" onClick={clearFilters}>查看全部干员</button>
+            <div className="border-b border-line px-5 pt-14 pb-16 text-center">
+              <svg className="mb-3.5 size-[38px] text-[#7a8c6e]" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="7" y="5" width="26" height="30" rx="3" /><path d="M13 14h14m-14 6h14m-14 6h7" /></svg>
+              <h3 className="mb-2 text-[17px]">{status === 'banned' && bans.size === 0 ? '还没有干员被 Ban' : '没有符合条件的干员'}</h3>
+              <p className="mb-5 text-[13px] text-muted">{status === 'banned' && bans.size === 0 ? '在上方点选盟约，即可查看受影响的干员。' : '试试其他等级、盟约或状态；重置筛选不会清除 Ban。'}</p>
+              <Button className="rounded-sm border border-accent bg-accent px-4.5 py-2 text-white hover:bg-[#334c2a]" onClick={clearFilters}>查看全部干员</Button>
             </div>
           )}
         </section>
       </main>
 
-      <footer className="site-footer">
-        <span>卫戍协议 · 规程</span>
-        <span>名单与头像来自 PRTS · 本工具仅辅助查询，不代表游戏内实时结果</span>
-        <a href={rulesSource} target="_blank" rel="noreferrer">规则来源</a>
+      <footer className="mx-auto flex max-w-[1344px] flex-wrap gap-5 border-t border-line pt-[22px] pb-8 text-[11px] text-muted compact:mx-8 tablet:mx-6 mobile:mx-3.5 mobile:gap-x-3 mobile:gap-y-[7px] mobile:pt-5 mobile:pb-7">
+        <span className="font-semibold text-accent">卫戍协议 · 规程</span>
+        <span className="mobile:order-3 mobile:w-full">名单与头像来自 PRTS · 本工具仅辅助查询，不代表游戏内实时结果</span>
+        <a className="ml-auto" href={rulesSource} target="_blank" rel="noreferrer">规则来源</a>
       </footer>
     </>
   )
