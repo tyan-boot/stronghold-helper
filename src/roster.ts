@@ -6,9 +6,16 @@ export type Availability = "available" | "banned";
 export type StatusFilter = Availability | "all";
 
 export const tierLabels = ["I", "II", "III", "IV", "V", "VI"];
-export const tierColors = ["text-tier-1", "text-tier-2", "text-tier-3", "text-tier-4", "text-tier-5", "text-tier-6"];
+export const tierColors = [
+  "text-tier-1",
+  "text-tier-2",
+  "text-tier-3",
+  "text-tier-4",
+  "text-tier-5",
+  "text-tier-6",
+];
 export const rulesSource =
-  "https://prts.wiki/w/卫戍协议·规程/战场一览#入门协议关卡内剧情";
+  "https://prts.wiki/w/%E5%8D%AB%E6%88%8D%E5%8D%8F%E8%AE%AE%C2%B7%E8%A7%84%E7%A8%8B/PRTS%E7%9B%9F%E7%BA%A6%E8%AE%B0%E5%BD%95";
 
 const primaryCovenants = new Set(
   catalog.covenants

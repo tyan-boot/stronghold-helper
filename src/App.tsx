@@ -381,9 +381,7 @@ function App() {
 
       <footer className="mx-auto flex max-w-[1344px] flex-wrap gap-5 border-t border-line pt-[22px] pb-8 text-[11px] text-muted compact:mx-8 tablet:mx-6 mobile:mx-3.5 mobile:gap-x-3 mobile:gap-y-[7px] mobile:pt-5 mobile:pb-7">
         <span className="font-semibold text-accent">卫戍协议 · 规程</span>
-        <span className="mobile:order-3 mobile:w-full">
-          名单与头像来自 PRTS · 本工具仅辅助查询，不代表游戏内实时结果
-        </span>
+
         <a
           className="ml-auto"
           href={rulesSource}
