@@ -1,6 +1,5 @@
-import { catalog, tierLabels, type Availability, type Operator } from './roster'
+import { catalog, tierColors, tierLabels, type Availability, type Operator } from './roster'
 
-const tierColors = ['text-tier-1', 'text-tier-2', 'text-tier-3', 'text-tier-4', 'text-tier-5', 'text-tier-6']
 const covenantLogos = new Map(catalog.covenants.map(({ name, logo }) => [name, logo]))
 
 export default function OperatorCard({ operator, bans }: {

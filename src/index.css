@@ -1,7 +1,9 @@
 @import "tailwindcss" source("./");
 
 @theme {
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Microsoft YaHei", sans-serif;
   --color-surface: #fff;
   --color-surface-soft: #eef1e8;
   --color-ink: #252b26;
@@ -33,7 +35,8 @@
     @apply min-w-[320px] text-[14px] leading-[1.6] mobile:text-[13px];
   }
 
-  button, a {
+  button,
+  a {
     @apply [-webkit-tap-highlight-color:transparent];
   }
 
@@ -45,11 +48,15 @@
     @apply text-accent underline underline-offset-4 hover:text-ink;
   }
 
-  button:focus-visible, a:focus-visible, [tabindex]:focus-visible {
+  button:focus-visible,
+  a:focus-visible,
+  [tabindex]:focus-visible {
     @apply outline-2 outline-solid outline-accent outline-offset-4;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     @apply leading-[1.4] font-bold;
   }
 
