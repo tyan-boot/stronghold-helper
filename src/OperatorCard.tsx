@@ -1,31 +1,45 @@
-import { tierLabels, type Availability, type Operator } from './roster'
+import { catalog, tierLabels, type Availability, type Operator } from './roster'
 
-const statusLabels = { available: '可用', banned: '已 Ban', uncertain: '待核实' }
+const tierColors = ['text-tier-1', 'text-tier-2', 'text-tier-3', 'text-tier-4', 'text-tier-5', 'text-tier-6']
+const covenantLogos = new Map(catalog.covenants.map(({ name, logo }) => [name, logo]))
 
 export default function OperatorCard({ operator, bans }: {
-  operator: Operator & { status: Availability; reason: string }
+  operator: Operator & { status: Availability }
   bans: ReadonlySet<string>
 }) {
   return (
-    <li data-status={operator.status} className="group min-w-0 overflow-hidden rounded-sm border border-line bg-surface data-[status=banned]:border-[#dababe] data-[status=uncertain]:border-[#d7c69f]">
-      <div className="relative aspect-[1.25] overflow-hidden border-b border-line bg-[#e7e9e3]">
+    <li data-status={operator.status} className="group min-w-0 overflow-hidden rounded-sm border border-line bg-surface data-[status=banned]:border-[#dababe]">
+      <div className="relative aspect-[4/5] overflow-hidden bg-[#e7e9e3]">
         <img
-          className="block size-full object-cover object-[center_35%] transition-[filter,opacity] duration-180 ease-[ease-out] group-data-[status=banned]:opacity-50 group-data-[status=banned]:grayscale motion-reduce:transition-none"
+          className="block size-full object-scale-down object-top transition-[filter,opacity] duration-180 ease-[ease-out] group-data-[status=banned]:opacity-50 group-data-[status=banned]:grayscale motion-reduce:transition-none"
           src={operator.image} alt="" width="180" height="180" loading="lazy"
         />
-        <span className="absolute top-1.5 left-1.5 min-w-6 rounded-xs bg-[#283126] px-[5px] py-px text-center text-[12px] text-white tabular-nums mobile:top-1 mobile:left-1 mobile:min-w-[21px] mobile:text-[11px]" aria-label={`${operator.tier} 阶`}>{tierLabels[operator.tier - 1]}</span>
-        <span className="absolute right-[5px] bottom-[5px] rounded-xs bg-[#f2f6ed] px-1.5 py-px text-[11px] font-semibold text-[#405735] group-data-[status=banned]:bg-danger-soft group-data-[status=banned]:text-danger group-data-[status=uncertain]:bg-warning-soft group-data-[status=uncertain]:text-warning mobile:px-1 mobile:text-[10px]">{statusLabels[operator.status]}</span>
+        <svg className={`absolute top-1.5 left-1.5 size-8 mobile:top-1 mobile:left-1 mobile:size-7 ${tierColors[operator.tier - 1]}`} viewBox="0 0 32 32" role="img" aria-label={`${operator.tier} 阶`}>
+          <path d="M5 1H27L31 5V27L27 31H5L1 27V5Z" fill="black" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.8" />
+          <path d="M5.5 2.5H26.5L29.5 5.5V26.5L26.5 29.5H5.5L2.5 26.5V5.5Z" fill="none" stroke="white" strokeWidth="0.5" strokeOpacity="0.35" />
+          <text className="font-sans" x="16" y="23" textAnchor="middle" fill="currentColor" stroke="none" fontSize="21" fontWeight="700">{tierLabels[operator.tier - 1]}</text>
+        </svg>
+        <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-white via-white/90 via-65% to-transparent px-2 pt-6 pb-1 mobile:px-1.5">
+          <ul className="flex flex-col gap-0.5 text-[12px] leading-[1.4] font-medium text-black mobile:text-[11px]" aria-label="所属盟约">
+            {operator.covenants.map((name) => (
+              <li key={name} className={`flex items-center gap-1 ${bans.has(name) ? 'text-danger line-through decoration-1' : ''}`}>
+                <img className="size-5 shrink-0 object-contain brightness-0 mobile:size-[18px]" src={covenantLogos.get(name)} alt="" width="20" height="20" />
+                <span>{name}{bans.has(name) && <span className="sr-only">（已 Ban）</span>}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {operator.status === 'banned' && (
+          <svg className="absolute top-0 right-0 size-11 text-[#ff8995] mobile:size-9" viewBox="0 0 44 44" fill="none" role="img" aria-label="已 Ban">
+            <path d="M0 0H44V44Z" fill="#7d2733" fillOpacity="0.9" stroke="none" />
+            <path d="m28 5 4 4-4 4-4-4Z M22 27V19a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v3" strokeWidth="2.5" />
+            <path d="m31 27 7 7m0-7-7 7" strokeWidth="3.5" />
+          </svg>
+        )}
       </div>
-      <div className="px-2.5 pt-[9px] pb-[11px] mobile:p-2">
-        <h3 className="min-h-[22px] text-[14px] font-[650] wrap-anywhere mobile:min-h-[38px] mobile:text-[13px]">{operator.name}</h3>
-        <ul className="flex min-h-9 flex-wrap content-start gap-x-1.5 gap-y-0.5 text-[11px] text-muted mobile:gap-x-[5px]" aria-label="所属盟约">
-          {operator.covenants.map((name) => (
-            <li key={name} className={`wrap-anywhere ${bans.has(name) ? 'text-danger line-through decoration-1' : ''}`}>
-              {name}{bans.has(name) && <span className="sr-only">（已 Ban）</span>}
-            </li>
-          ))}
-        </ul>
-        <p className="mt-1 min-h-10 border-t border-line pt-1 text-[11px] leading-[1.5] wrap-anywhere text-muted group-data-[status=banned]:text-danger group-data-[status=uncertain]:text-warning">{operator.reason}</p>
+      <div className="flex min-h-12 items-center gap-1.5 bg-white px-1.5 py-1 mobile:min-h-11 mobile:gap-1 mobile:px-1">
+        <img className="size-5 shrink-0 object-contain mobile:size-[18px]" src={`/images/professions/${operator.profession}.png`} alt={operator.profession} width="20" height="20" />
+        <h3 className="min-w-0 text-[14px] leading-[1.3] font-[650] wrap-anywhere mobile:text-[12px]">{operator.name}</h3>
       </div>
     </li>
   )

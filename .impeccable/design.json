@@ -143,34 +143,6 @@
           "oklch(84% 0.0163 17.45)",
           "oklch(95% 0.0163 17.45)"
         ]
-      },
-      "warning": {
-        "role": "secondary",
-        "displayName": "warning",
-        "tonalRamp": [
-          "oklch(15% 0.0942 77.90)",
-          "oklch(26% 0.0942 77.90)",
-          "oklch(38% 0.0942 77.90)",
-          "oklch(49% 0.0942 77.90)",
-          "oklch(61% 0.0942 77.90)",
-          "oklch(72% 0.0942 77.90)",
-          "oklch(84% 0.0942 77.90)",
-          "oklch(95% 0.0942 77.90)"
-        ]
-      },
-      "warning-soft": {
-        "role": "secondary",
-        "displayName": "warning-soft",
-        "tonalRamp": [
-          "oklch(15% 0.0333 88.06)",
-          "oklch(26% 0.0333 88.06)",
-          "oklch(38% 0.0333 88.06)",
-          "oklch(49% 0.0333 88.06)",
-          "oklch(61% 0.0333 88.06)",
-          "oklch(72% 0.0333 88.06)",
-          "oklch(84% 0.0333 88.06)",
-          "oklch(95% 0.0333 88.06)"
-        ]
       }
     },
     "typographyMeta": {
@@ -263,9 +235,9 @@
       "name": "status-chip",
       "kind": "chip",
       "refersTo": "status-chip",
-      "description": "Noninteractive pending-verification label.",
-      "html": "<span class=\"ds-status-chip\">待核实</span>",
-      "css": ".ds-status-chip { font:600 11px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; padding:1px 6px; border-radius:2px; background:var(--warning-soft,#fbf1d9); color:var(--warning,#815c18); }"
+      "description": "Noninteractive availability label.",
+      "html": "<span class=\"ds-status-chip\">可用</span>",
+      "css": ".ds-status-chip { font:600 11px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; padding:1px 6px; border-radius:2px; background:#f2f6ed; color:#405735; }"
     },
     {
       "name": "operator-card",
@@ -289,7 +261,7 @@
     "overview": "A compact Chinese operator catalog on pale gray-green paper. Real portraits carry recognition; fine rules and concise metadata support comparison. Desktop is primary, with a vertically stacked mobile layout. Ban feedback stays on the existing cards rather than becoming a separate results screen.",
     "keyCharacteristics": [
       "Portrait-led density, not dashboard decoration.",
-      "Olive selection, muted red bans, amber uncertainty.",
+      "Olive selection and availability, muted red bans.",
       "Stable portrait geometry with explicit status and reasons."
     ],
     "rules": [
@@ -301,13 +273,12 @@
     ],
     "dos": [
       "Do preserve real portraits, written status and a reason area on every card.",
-      "Do distinguish ordinary selection from Ban; retain amber for pending verification.",
+      "Do distinguish ordinary selection from Ban.",
       "Do retain keyboard focus, semantic controls and reduced-motion behavior."
     ],
     "donts": [
-      "Don't change portrait dimensions or move pending-verification operators into the banned group.",
-      "Don't communicate a ruling through grayscale or color alone.",
-      "Don't present PRTS-ambiguous mixed cases as confirmed available or banned."
+      "Don't change portrait dimensions or move available operators into the banned group.",
+      "Don't communicate a ruling through grayscale or color alone."
     ]
   }
 }

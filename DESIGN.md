@@ -12,8 +12,6 @@ colors:
   accent-soft: "#e4ebdc"
   danger: "#9b3540"
   danger-soft: "#f8e9e9"
-  warning: "#815c18"
-  warning-soft: "#fbf1d9"
 typography:
   headline:
     fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif"
@@ -73,8 +71,8 @@ components:
     textColor: "{colors.muted}"
     padding: "6px 2px 12px"
   status-chip:
-    backgroundColor: "{colors.warning-soft}"
-    textColor: "{colors.warning}"
+    backgroundColor: "#f2f6ed"
+    textColor: "#405735"
     rounded: "{rounded.badge}"
     padding: "1px 6px"
   operator-card:
@@ -92,7 +90,7 @@ A compact Chinese operator catalog on pale gray-green paper. Real portraits carr
 
 **Key Characteristics:**
 - Portrait-led density, not dashboard decoration.
-- Olive selection, muted red bans, amber uncertainty.
+- Olive selection and availability, muted red bans.
 - Stable portrait geometry with explicit status and reasons.
 
 ## Colors
@@ -101,7 +99,7 @@ A compact Chinese operator catalog on pale gray-green paper. Real portraits carr
 Olive (accent) marks ordinary selection, links and keyboard focus; pale olive (accent-soft) fills selected tier controls.
 
 ### Secondary
-Muted red (danger / danger-soft) marks bans. Amber (warning / warning-soft) identifies pending verification, not availability or a ban.
+Muted red (danger / danger-soft) marks bans; available operators retain pale green status labels.
 
 ### Neutral
 Gray-green paper supports white surfaces. Soft surfaces hold compact counts; ink carries primary text, muted carries supporting metadata, and line separates regions.
@@ -133,17 +131,16 @@ Small-radius rectangles dominate; frontmatter records badge, control, card and p
 - **Ban buttons:** compact covenant icon and name; selected bans use red tint, strike-through and a prohibition mark. Minimum height is (43px), becoming (44px) on mobile.
 - **Action buttons:** olive solid primary, white outlined quiet action, and text-only reset. Hover deepens the primary, gives the clear-Ban action a red tint, or underlines reset. Disabled controls remain static.
 - **Filters:** status controls are counted button groups, not page navigation; the active item has a (2px) underline. Tier choices use pale olive selection. Covenant filtering uses a native select, (34px) tall or (40px) on mobile; there is no text-search input.
-- **Operator cards:** banned portraits use grayscale (1) and opacity (0.5); uncertain portraits retain color. Desktop information padding is (9px 10px 11px), mobile (8px). Name minimum height is (22px) desktop / (38px) mobile; covenant area is (36px). Every card has a concise reason with a reserved minimum (40px), separated by a fine rule. This is not a fixed-height clipping region: long text wraps. Ban does not insert a new reason block.
+- **Operator cards:** banned portraits use grayscale (1) and opacity (0.5); available portraits retain color. Desktop information padding is (9px 10px 11px), mobile (8px). Name minimum height is (22px) desktop / (38px) mobile; covenant area is (36px). Every card has a concise reason with a reserved minimum (40px), separated by a fine rule. This is not a fixed-height clipping region: long text wraps. Ban does not insert a new reason block.
 - **Feedback and access:** focus is an olive (2px) outline offset by (4px). Counts announce through a polite live region. Portrait filter and opacity transition over (180ms ease-out); reduced-motion preference disables the transition. Rules use native details disclosure.
 
 ## Do's and Don'ts
 
 ### Do:
 - Do preserve real portraits, written status and a reason area on every card.
-- Do distinguish ordinary selection from Ban; retain amber for pending verification.
+- Do distinguish ordinary selection from Ban.
 - Do retain keyboard focus, semantic controls and reduced-motion behavior.
 
 ### Don't:
-- Don't change portrait dimensions or move pending-verification operators into the banned group.
+- Don't change portrait dimensions or move available operators into the banned group.
 - Don't communicate a ruling through grayscale or color alone.
-- Don't present PRTS-ambiguous mixed cases as confirmed available or banned.

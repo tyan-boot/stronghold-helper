@@ -10,7 +10,6 @@ const statusOptions = [
   { value: 'all', label: '全部' },
   { value: 'available', label: '可用' },
   { value: 'banned', label: '已 Ban' },
-  { value: 'uncertain', label: '待核实' },
 ] as const
 
 function App() {
@@ -26,7 +25,6 @@ function App() {
     all: roster.length,
     available: roster.filter((operator) => operator.status === 'available').length,
     banned: roster.filter((operator) => operator.status === 'banned').length,
-    uncertain: roster.filter((operator) => operator.status === 'uncertain').length,
   }
   const hasFilters = tier !== 0 || covenants.length > 0 || disableBannedKinds.length > 0 || status !== 'all'
 
@@ -101,8 +99,8 @@ function App() {
             { kind: 'primary', label: '核心盟约' },
             { kind: 'secondary', label: '附加盟约' },
           ].map((group) => (
-            <div className="mb-4 grid grid-cols-[78px_1fr] items-start gap-3 tablet:grid-cols-[68px_1fr] tablet:gap-2 mobile:block" role="group" aria-label={`${group.label} Ban 设置`} key={group.kind}>
-              <div className="pt-1 mobile:flex mobile:items-center mobile:gap-2 mobile:pt-0 mobile:pb-2"><h3 className="text-[13px] font-[650]">{group.label}</h3></div>
+            <div className="mb-4 grid grid-cols-[max-content_1fr] items-center gap-3 tablet:gap-2 mobile:block" role="group" aria-label={`${group.label} Ban 设置`} key={group.kind}>
+              <div className="mobile:pb-2"><h3 className="text-[20px] font-[650]">{group.label}</h3></div>
               <div className="grid grid-cols-[repeat(auto-fill,minmax(60px,1fr))] gap-1">
                 {catalog.covenants.filter((item) => item.kind === group.kind).map((item) => (
                   <CovenantButton
@@ -127,19 +125,19 @@ function App() {
           <div className="flex gap-6 border-b border-line mobile:justify-between mobile:gap-1.5" role="group" aria-label="按干员状态筛选">
             {statusOptions.map((option) => (
               <Toggle
-                className="group relative flex min-h-[43px] items-center gap-2 border-0 bg-transparent px-0.5 pt-1.5 pb-3 text-[14px] text-muted hover:text-ink data-pressed:font-[650] data-pressed:text-accent data-pressed:after:absolute data-pressed:after:inset-x-0 data-pressed:after:-bottom-px data-pressed:after:h-0.5 data-pressed:after:bg-current data-pressed:after:content-[''] data-[status=banned]:data-pressed:text-danger data-[status=uncertain]:data-pressed:text-warning mobile:min-h-11 mobile:gap-[5px] mobile:text-[13px] narrow:gap-[3px] narrow:text-[12px]"
+                className="group relative flex min-h-[43px] items-center gap-2 border-0 bg-transparent px-0.5 pt-1.5 pb-3 text-[14px] text-muted hover:text-ink data-pressed:font-[650] data-pressed:text-accent data-pressed:after:absolute data-pressed:after:inset-x-0 data-pressed:after:-bottom-px data-pressed:after:h-0.5 data-pressed:after:bg-current data-pressed:after:content-[''] data-[status=banned]:data-pressed:text-danger mobile:min-h-11 mobile:gap-[5px] mobile:text-[13px] narrow:gap-[3px] narrow:text-[12px]"
                 key={option.value}
                 data-status={option.value}
                 pressed={status === option.value}
                 onPressedChange={() => setStatus(option.value)}
               >
-                {option.label}<span className="min-w-[26px] rounded-[3px] bg-[#e8ebe2] px-1.5 text-[12px] tabular-nums group-data-pressed:bg-accent group-data-pressed:text-white group-data-[status=banned]:group-data-pressed:bg-danger group-data-[status=uncertain]:group-data-pressed:bg-warning mobile:min-w-[22px] mobile:px-[5px] mobile:text-[11px]">{counts[option.value]}</span>
+                {option.label}<span className="min-w-[26px] rounded-[3px] bg-[#e8ebe2] px-1.5 text-[12px] tabular-nums group-data-pressed:bg-accent group-data-pressed:text-white group-data-[status=banned]:group-data-pressed:bg-danger mobile:min-w-[22px] mobile:px-[5px] mobile:text-[11px]">{counts[option.value]}</span>
               </Toggle>
             ))}
           </div>
 
           <div className="flex flex-wrap items-center gap-x-7 gap-y-3 border-b border-line py-4 mobile:gap-2.5 mobile:py-3">
-            <div className="flex items-center gap-[5px] mobile:w-full mobile:justify-between mobile:gap-0.5" role="group" aria-label="按等级筛选">
+            <div className="flex items-center gap-[5px] mobile:gap-0.5" role="group" aria-label="按等级筛选">
               <span className="mr-2 text-[12px] text-muted mobile:mr-1">等级</span>
               {[0, 1, 2, 3, 4, 5, 6].map((value) => (
                 <Toggle
@@ -150,10 +148,14 @@ function App() {
                 </Toggle>
               ))}
             </div>
+            <Button
+              className="inline-flex min-h-9 items-center justify-center gap-[7px] rounded-sm border border-line bg-surface px-2.5 py-[5px] text-[13px] whitespace-nowrap enabled:hover:border-danger enabled:hover:bg-danger-soft enabled:hover:text-danger disabled:bg-[#f7f8f5] mobile:border-0 mobile:px-1 mobile:text-[11px]"
+              onClick={clearFilters} disabled={!hasFilters}
+            >
+              <svg className="size-4 mobile:size-3.5" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 7a6 6 0 1 1-.4 5M4 3v4h4" /></svg>
+              重置筛选
+            </Button>
             <div className="w-full" role="group" aria-label="按盟约筛选">
-              <div className="mb-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[12px] text-muted">
-                <Button className="ml-auto min-h-[34px] border-0 bg-transparent py-1 pl-3 text-[12px] text-accent enabled:hover:underline enabled:hover:underline-offset-4 disabled:text-[#747c70] mobile:min-h-10" onClick={clearFilters} disabled={!hasFilters}>重置筛选</Button>
-              </div>
               <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] text-muted">
                 <span>禁用已 Ban：</span>
                 {[
@@ -180,21 +182,26 @@ function App() {
                 { kind: 'primary', label: '核心盟约' },
                 { kind: 'secondary', label: '附加盟约' },
               ].map((group) => (
-                <div className="mb-4 grid grid-cols-[78px_1fr] items-start gap-3 tablet:grid-cols-[68px_1fr] tablet:gap-2 mobile:block" role="group" aria-label={`${group.label}筛选`} key={group.kind}>
-                  <div className="pt-1 mobile:flex mobile:items-center mobile:gap-2 mobile:pt-0 mobile:pb-2"><h3 className="text-[13px] font-[650]">{group.label}</h3></div>
+                <div className="mb-4 grid grid-cols-[max-content_1fr] items-center gap-3 tablet:gap-2 mobile:block" role="group" aria-label={`${group.label}筛选`} key={group.kind}>
+                  <div className="mobile:pb-2"><h3 className="text-[20px] font-[650]">{group.label}</h3></div>
                   <div className="grid grid-cols-[repeat(auto-fill,minmax(60px,1fr))] gap-1">
-                    {catalog.covenants.filter((item) => item.kind === group.kind).map((item) => (
-                      <CovenantButton
-                        key={item.name}
-                        covenant={item}
-                        variant="filter"
-                        disabled={disableBannedKinds.includes(group.kind) && bans.has(item.name)}
-                        pressed={covenants.includes(item.name)}
-                        onPressedChange={() => setCovenants((current) => current.includes(item.name)
-                          ? current.filter((name) => name !== item.name)
-                          : [...current, item.name])}
-                      />
-                    ))}
+                    {catalog.covenants
+                      .filter((item) => item.kind === group.kind)
+                      .sort((a, b) => disableBannedKinds.includes(group.kind)
+                        ? Number(bans.has(a.name)) - Number(bans.has(b.name))
+                        : 0)
+                      .map((item) => (
+                        <CovenantButton
+                          key={item.name}
+                          covenant={item}
+                          variant="filter"
+                          disabled={disableBannedKinds.includes(group.kind) && bans.has(item.name)}
+                          pressed={covenants.includes(item.name)}
+                          onPressedChange={() => setCovenants((current) => current.includes(item.name)
+                            ? current.filter((name) => name !== item.name)
+                            : [...current, item.name])}
+                        />
+                      ))}
                   </div>
                 </div>
               ))}
@@ -203,7 +210,7 @@ function App() {
 
           <div className="flex justify-between gap-3 py-[15px] text-[12px] text-muted tabular-nums mobile:flex-col mobile:gap-0.5 mobile:py-3 mobile:text-[11px]" role="status" aria-live="polite" aria-atomic="true">
             <span>显示 <strong className="font-semibold text-ink">{visibleOperators.length}</strong> / {catalog.operators.length} 名干员</span>
-            <span>{bans.size === 0 ? '尚未设置 Ban，所有干员均可用' : `当前筛选：${counts.available} 可用 · ${counts.banned} 已 Ban · ${counts.uncertain} 待核实`}</span>
+            <span>{bans.size === 0 ? '尚未设置 Ban，所有干员均可用' : `当前筛选：${counts.available} 可用 · ${counts.banned} 已 Ban`}</span>
           </div>
 
           {visibleOperators.length > 0 ? (

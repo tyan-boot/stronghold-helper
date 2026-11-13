@@ -11,8 +11,12 @@
   --color-accent-soft: #e4ebdc;
   --color-danger: #9b3540;
   --color-danger-soft: #f8e9e9;
-  --color-warning: #815c18;
-  --color-warning-soft: #fbf1d9;
+  --color-tier-1: #c5c5c5;
+  --color-tier-2: #fff;
+  --color-tier-3: #46efbc;
+  --color-tier-4: #33c9da;
+  --color-tier-5: #f6c60f;
+  --color-tier-6: #e88c1a;
 }
 
 @custom-variant compact (@media (max-width: 1199px));

@@ -2,10 +2,10 @@ import catalog from './data/stronghold.json' with { type: 'json' }
 
 export { catalog }
 export type Operator = (typeof catalog.operators)[number]
-export type Availability = 'available' | 'banned' | 'uncertain'
+export type Availability = 'available' | 'banned'
 export type StatusFilter = Availability | 'all'
 
-export const tierLabels = ['Ⅰ', 'Ⅱ', 'Ⅲ', 'Ⅳ', 'Ⅴ', 'Ⅵ']
+export const tierLabels = ['I', 'II', 'III', 'IV', 'V', 'VI']
 export const rulesSource = 'https://prts.wiki/w/卫戍协议·规程/战场一览#入门协议关卡内剧情'
 
 const primaryCovenants = new Set(
@@ -26,15 +26,7 @@ export function getAvailability(operator: Operator, bans: ReadonlySet<string>): 
       return { status: 'banned', reason: '核心盟约全部禁用' }
     }
 
-    if (bannedPrimary.length > 0) {
-      return { status: 'uncertain', reason: '核心盟约一禁一留' }
-    }
-
-    if (allSecondaryBanned) {
-      return { status: 'uncertain', reason: '核心可用、附加全禁' }
-    }
-
-    return { status: 'available', reason: '核心盟约可用' }
+    return { status: 'available', reason: '仍有可用核心盟约' }
   }
 
   return allSecondaryBanned

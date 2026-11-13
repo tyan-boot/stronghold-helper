@@ -4,6 +4,7 @@
   "operators": [
     {
       "name": "折桠",
+      "profession": "重装",
       "covenants": [
         "乌萨斯",
         "不屈"
@@ -13,6 +14,7 @@
     },
     {
       "name": "艾丝黛尔",
+      "profession": "近卫",
       "covenants": [
         "萨尔贡",
         "独行"
@@ -22,6 +24,7 @@
     },
     {
       "name": "幽灵鲨",
+      "profession": "近卫",
       "covenants": [
         "阿戈尔"
       ],
@@ -30,6 +33,7 @@
     },
     {
       "name": "野鬃",
+      "profession": "先锋",
       "covenants": [
         "卡西米尔",
         "助力"
@@ -39,6 +43,7 @@
     },
     {
       "name": "慕斯",
+      "profession": "近卫",
       "covenants": [
         "维多利亚"
       ],
@@ -47,6 +52,7 @@
     },
     {
       "name": "角峰",
+      "profession": "重装",
       "covenants": [
         "谢拉格",
         "坚守"
@@ -56,6 +62,7 @@
     },
     {
       "name": "灰喉",
+      "profession": "狙击",
       "covenants": [
         "精准"
       ],
@@ -64,6 +71,7 @@
     },
     {
       "name": "深靛",
+      "profession": "术师",
       "covenants": [
         "伊比利亚"
       ],
@@ -72,6 +80,7 @@
     },
     {
       "name": "卡达",
+      "profession": "术师",
       "covenants": [
         "奥术"
       ],
@@ -80,6 +89,7 @@
     },
     {
       "name": "摆渡人",
+      "profession": "近卫",
       "covenants": [
         "坚守",
         "不屈"
@@ -89,6 +99,7 @@
     },
     {
       "name": "夏栎",
+      "profession": "辅助",
       "covenants": [
         "助力"
       ],
@@ -97,6 +108,7 @@
     },
     {
       "name": "杰克",
+      "profession": "近卫",
       "covenants": [
         "突袭"
       ],
@@ -105,6 +117,7 @@
     },
     {
       "name": "霜叶",
+      "profession": "近卫",
       "covenants": [
         "灵巧"
       ],
@@ -113,6 +126,7 @@
     },
     {
       "name": "拜松",
+      "profession": "重装",
       "covenants": [
         "炎"
       ],
@@ -121,6 +135,7 @@
     },
     {
       "name": "褐果",
+      "profession": "医疗",
       "covenants": [
         "聚合"
       ],
@@ -129,6 +144,7 @@
     },
     {
       "name": "烈夏",
+      "profession": "近卫",
       "covenants": [
         "乌萨斯"
       ],
@@ -137,6 +153,7 @@
     },
     {
       "name": "陨星",
+      "profession": "狙击",
       "covenants": [
         "迅捷"
       ],
@@ -145,6 +162,7 @@
     },
     {
       "name": "拉普兰德",
+      "profession": "近卫",
       "covenants": [
         "叙拉古"
       ],
@@ -153,6 +171,7 @@
     },
     {
       "name": "地灵",
+      "profession": "辅助",
       "covenants": [
         "莱塔尼亚",
         "独行"
@@ -162,6 +181,7 @@
     },
     {
       "name": "折光",
+      "profession": "术师",
       "covenants": [
         "莱塔尼亚"
       ],
@@ -170,6 +190,7 @@
     },
     {
       "name": "蓝毒",
+      "profession": "狙击",
       "covenants": [
         "伊比利亚"
       ],
@@ -178,6 +199,7 @@
     },
     {
       "name": "泡泡",
+      "profession": "重装",
       "covenants": [
         "萨尔贡",
         "坚守"
@@ -187,6 +209,7 @@
     },
     {
       "name": "莎草",
+      "profession": "医疗",
       "covenants": [
         "萨尔贡",
         "聚合"
@@ -196,6 +219,7 @@
     },
     {
       "name": "雪猎",
+      "profession": "狙击",
       "covenants": [
         "谢拉格",
         "精准"
@@ -205,6 +229,7 @@
     },
     {
       "name": "砾",
+      "profession": "特种",
       "covenants": [
         "卡西米尔",
         "不屈"
@@ -214,6 +239,7 @@
     },
     {
       "name": "复奏",
+      "profession": "术师",
       "covenants": [
         "莱塔尼亚",
         "叙拉古",
@@ -224,6 +250,7 @@
     },
     {
       "name": "奥斯塔",
+      "profession": "狙击",
       "covenants": [
         "叙拉古"
       ],
@@ -232,6 +259,7 @@
     },
     {
       "name": "Miss.Christine",
+      "profession": "术师",
       "covenants": [
         "维多利亚",
         "奥术"
@@ -241,6 +269,7 @@
     },
     {
       "name": "哈洛德",
+      "profession": "医疗",
       "covenants": [
         "维多利亚",
         "谢拉格"
@@ -250,6 +279,7 @@
     },
     {
       "name": "云迹",
+      "profession": "特种",
       "covenants": [
         "灵巧",
         "奇迹"
@@ -259,6 +289,7 @@
     },
     {
       "name": "蛇屠箱",
+      "profession": "重装",
       "covenants": [
         "坚守"
       ],
@@ -267,6 +298,7 @@
     },
     {
       "name": "波登可",
+      "profession": "辅助",
       "covenants": [
         "聚合",
         "迅捷"
@@ -276,6 +308,7 @@
     },
     {
       "name": "承曦格雷伊",
+      "profession": "狙击",
       "covenants": [
         "精准",
         "灵巧"
@@ -285,6 +318,7 @@
     },
     {
       "name": "锡人",
+      "profession": "特种",
       "covenants": [
         "投资人"
       ],
@@ -293,6 +327,7 @@
     },
     {
       "name": "宴",
+      "profession": "近卫",
       "covenants": [
         "不屈"
       ],
@@ -301,6 +336,7 @@
     },
     {
       "name": "渡桥",
+      "profession": "先锋",
       "covenants": [
         "远见"
       ],
@@ -309,6 +345,7 @@
     },
     {
       "name": "矩",
+      "profession": "狙击",
       "covenants": [
         "炎"
       ],
@@ -317,6 +354,7 @@
     },
     {
       "name": "星极",
+      "profession": "近卫",
       "covenants": [
         "奇迹"
       ],
@@ -325,6 +363,7 @@
     },
     {
       "name": "瑰盐",
+      "profession": "医疗",
       "covenants": [
         "伊比利亚",
         "聚合"
@@ -334,6 +373,7 @@
     },
     {
       "name": "真理",
+      "profession": "辅助",
       "covenants": [
         "乌萨斯"
       ],
@@ -342,6 +382,7 @@
     },
     {
       "name": "铸铁",
+      "profession": "近卫",
       "covenants": [
         "突袭"
       ],
@@ -350,6 +391,7 @@
     },
     {
       "name": "星源",
+      "profession": "术师",
       "covenants": [
         "助力"
       ],
@@ -358,6 +400,7 @@
     },
     {
       "name": "安哲拉",
+      "profession": "狙击",
       "covenants": [
         "阿戈尔",
         "助力"
@@ -367,6 +410,7 @@
     },
     {
       "name": "车尔尼",
+      "profession": "重装",
       "covenants": [
         "莱塔尼亚",
         "坚守"
@@ -376,6 +420,7 @@
     },
     {
       "name": "卡涅利安",
+      "profession": "术师",
       "covenants": [
         "莱塔尼亚",
         "萨尔贡",
@@ -386,6 +431,7 @@
     },
     {
       "name": "乌啾",
+      "profession": "医疗",
       "covenants": [
         "乌萨斯",
         "聚合"
@@ -395,6 +441,7 @@
     },
     {
       "name": "海沫",
+      "profession": "近卫",
       "covenants": [
         "伊比利亚",
         "不屈"
@@ -404,6 +451,7 @@
     },
     {
       "name": "旅骨",
+      "profession": "特种",
       "covenants": [
         "伊比利亚",
         "精准"
@@ -413,6 +461,7 @@
     },
     {
       "name": "风絮",
+      "profession": "医疗",
       "covenants": [
         "炎",
         "聚合"
@@ -422,6 +471,7 @@
     },
     {
       "name": "极光",
+      "profession": "重装",
       "covenants": [
         "谢拉格"
       ],
@@ -430,6 +480,7 @@
     },
     {
       "name": "耶拉",
+      "profession": "术师",
       "covenants": [
         "谢拉格",
         "奇迹"
@@ -439,6 +490,7 @@
     },
     {
       "name": "初雪",
+      "profession": "辅助",
       "covenants": [
         "谢拉格",
         "协防干员"
@@ -448,6 +500,7 @@
     },
     {
       "name": "深巡",
+      "profession": "重装",
       "covenants": [
         "阿戈尔",
         "坚守"
@@ -457,6 +510,7 @@
     },
     {
       "name": "斯卡蒂",
+      "profession": "近卫",
       "covenants": [
         "阿戈尔",
         "突袭"
@@ -466,6 +520,7 @@
     },
     {
       "name": "瑕光",
+      "profession": "重装",
       "covenants": [
         "卡西米尔",
         "突袭"
@@ -475,6 +530,7 @@
     },
     {
       "name": "忍冬",
+      "profession": "先锋",
       "covenants": [
         "叙拉古",
         "迅捷"
@@ -484,6 +540,7 @@
     },
     {
       "name": "伺夜",
+      "profession": "先锋",
       "covenants": [
         "叙拉古",
         "精准"
@@ -493,6 +550,7 @@
     },
     {
       "name": "水灯心",
+      "profession": "狙击",
       "covenants": [
         "维多利亚",
         "独行",
@@ -503,6 +561,7 @@
     },
     {
       "name": "空弦",
+      "profession": "狙击",
       "covenants": [
         "精准",
         "远见"
@@ -512,6 +571,7 @@
     },
     {
       "name": "吉星",
+      "profession": "狙击",
       "covenants": [
         "奇迹"
       ],
@@ -520,6 +580,7 @@
     },
     {
       "name": "伊桑",
+      "profession": "特种",
       "covenants": [
         "奥术",
         "突袭"
@@ -529,6 +590,7 @@
     },
     {
       "name": "罗比菈塔",
+      "profession": "辅助",
       "covenants": [
         "坚守",
         "助力"
@@ -538,6 +600,7 @@
     },
     {
       "name": "乌有",
+      "profession": "特种",
       "covenants": [
         "炎"
       ],
@@ -546,6 +609,7 @@
     },
     {
       "name": "历阵锐枪芬",
+      "profession": "先锋",
       "covenants": [
         "卡西米尔",
         "远见"
@@ -555,6 +619,7 @@
     },
     {
       "name": "凯瑟琳",
+      "profession": "辅助",
       "covenants": [
         "维多利亚",
         "远见"
@@ -564,6 +629,7 @@
     },
     {
       "name": "盟约·辅助干员",
+      "profession": "辅助",
       "covenants": [
         "调和"
       ],
@@ -572,6 +638,7 @@
     },
     {
       "name": "风丸",
+      "profession": "特种",
       "covenants": [
         "不屈"
       ],
@@ -580,6 +647,7 @@
     },
     {
       "name": "至简",
+      "profession": "术师",
       "covenants": [
         "萨尔贡"
       ],
@@ -588,6 +656,7 @@
     },
     {
       "name": "奥尔佳",
+      "profession": "近卫",
       "covenants": [
         "乌萨斯",
         "灵巧"
@@ -597,6 +666,7 @@
     },
     {
       "name": "青枳",
+      "profession": "先锋",
       "covenants": [
         "坚守",
         "迅捷"
@@ -606,6 +676,7 @@
     },
     {
       "name": "黑键",
+      "profession": "术师",
       "covenants": [
         "莱塔尼亚",
         "精准"
@@ -615,6 +686,7 @@
     },
     {
       "name": "艾雅法拉",
+      "profession": "术师",
       "covenants": [
         "莱塔尼亚",
         "奥术"
@@ -624,6 +696,7 @@
     },
     {
       "name": "赫拉格",
+      "profession": "近卫",
       "covenants": [
         "乌萨斯",
         "突袭"
@@ -633,6 +706,7 @@
     },
     {
       "name": "维伊",
+      "profession": "术师",
       "covenants": [
         "乌萨斯",
         "奥术"
@@ -642,6 +716,7 @@
     },
     {
       "name": "温蒂",
+      "profession": "特种",
       "covenants": [
         "伊比利亚",
         "坚守"
@@ -651,6 +726,7 @@
     },
     {
       "name": "流明",
+      "profession": "医疗",
       "covenants": [
         "伊比利亚",
         "聚合"
@@ -660,6 +736,7 @@
     },
     {
       "name": "余",
+      "profession": "重装",
       "covenants": [
         "炎",
         "坚守"
@@ -669,6 +746,7 @@
     },
     {
       "name": "森蚺",
+      "profession": "重装",
       "covenants": [
         "萨尔贡",
         "不屈"
@@ -678,6 +756,7 @@
     },
     {
       "name": "灵知",
+      "profession": "辅助",
       "covenants": [
         "谢拉格",
         "迅捷"
@@ -687,6 +766,7 @@
     },
     {
       "name": "归溟幽灵鲨",
+      "profession": "特种",
       "covenants": [
         "阿戈尔",
         "不屈"
@@ -696,6 +776,7 @@
     },
     {
       "name": "水月",
+      "profession": "特种",
       "covenants": [
         "阿戈尔",
         "灵巧"
@@ -705,6 +786,7 @@
     },
     {
       "name": "远牙",
+      "profession": "狙击",
       "covenants": [
         "卡西米尔",
         "精准"
@@ -714,6 +796,7 @@
     },
     {
       "name": "玛恩纳",
+      "profession": "近卫",
       "covenants": [
         "卡西米尔"
       ],
@@ -722,6 +805,7 @@
     },
     {
       "name": "涤火杰西卡",
+      "profession": "重装",
       "covenants": [
         "维多利亚",
         "坚守"
@@ -731,6 +815,7 @@
     },
     {
       "name": "白铁",
+      "profession": "辅助",
       "covenants": [
         "维多利亚",
         "助力"
@@ -740,6 +825,7 @@
     },
     {
       "name": "斥罪",
+      "profession": "重装",
       "covenants": [
         "叙拉古",
         "不屈"
@@ -749,6 +835,7 @@
     },
     {
       "name": "W",
+      "profession": "狙击",
       "covenants": [
         "迅捷"
       ],
@@ -757,6 +844,7 @@
     },
     {
       "name": "霍尔海雅",
+      "profession": "术师",
       "covenants": [
         "奥术",
         "精准"
@@ -766,6 +854,7 @@
     },
     {
       "name": "山",
+      "profession": "近卫",
       "covenants": [
         "投资人"
       ],
@@ -774,6 +863,7 @@
     },
     {
       "name": "淬羽赫默",
+      "profession": "辅助",
       "covenants": [
         "助力"
       ],
@@ -782,6 +872,7 @@
     },
     {
       "name": "赫德雷",
+      "profession": "近卫",
       "covenants": [
         "突袭"
       ],
@@ -790,6 +881,7 @@
     },
     {
       "name": "夜莺",
+      "profession": "医疗",
       "covenants": [
         "聚合",
         "协防干员"
@@ -799,6 +891,7 @@
     },
     {
       "name": "仇白",
+      "profession": "近卫",
       "covenants": [
         "炎",
         "灵巧"
@@ -808,6 +901,7 @@
     },
     {
       "name": "异客",
+      "profession": "术师",
       "covenants": [
         "萨尔贡",
         "奥术"
@@ -817,6 +911,7 @@
     },
     {
       "name": "安洁莉娜",
+      "profession": "辅助",
       "covenants": [
         "叙拉古",
         "奇迹"
@@ -826,6 +921,7 @@
     },
     {
       "name": "华法琳",
+      "profession": "医疗",
       "covenants": [
         "灵巧",
         "聚合"
@@ -835,6 +931,7 @@
     },
     {
       "name": "寒檀",
+      "profession": "术师",
       "covenants": [
         "远见"
       ],
@@ -843,6 +940,7 @@
     },
     {
       "name": "纯烬艾雅法拉",
+      "profession": "医疗",
       "covenants": [
         "聚合",
         "莱塔尼亚",
@@ -853,6 +951,7 @@
     },
     {
       "name": "怒潮凛冬",
+      "profession": "近卫",
       "covenants": [
         "乌萨斯",
         "奇迹"
@@ -862,6 +961,7 @@
     },
     {
       "name": "艾丽妮",
+      "profession": "近卫",
       "covenants": [
         "伊比利亚"
       ],
@@ -870,6 +970,7 @@
     },
     {
       "name": "棘刺",
+      "profession": "近卫",
       "covenants": [
         "伊比利亚",
         "奥术"
@@ -879,6 +980,7 @@
     },
     {
       "name": "黍",
+      "profession": "重装",
       "covenants": [
         "炎",
         "远见"
@@ -888,6 +990,7 @@
     },
     {
       "name": "佩佩",
+      "profession": "近卫",
       "covenants": [
         "萨尔贡",
         "灵巧"
@@ -897,6 +1000,7 @@
     },
     {
       "name": "圣聆初雪",
+      "profession": "术师",
       "covenants": [
         "谢拉格",
         "奥术"
@@ -906,6 +1010,7 @@
     },
     {
       "name": "凛御银灰",
+      "profession": "先锋",
       "covenants": [
         "谢拉格",
         "灵巧",
@@ -916,6 +1021,7 @@
     },
     {
       "name": "歌蕾蒂娅",
+      "profession": "特种",
       "covenants": [
         "阿戈尔"
       ],
@@ -924,6 +1030,7 @@
     },
     {
       "name": "乌尔比安",
+      "profession": "近卫",
       "covenants": [
         "阿戈尔"
       ],
@@ -932,6 +1039,7 @@
     },
     {
       "name": "薇薇安娜",
+      "profession": "近卫",
       "covenants": [
         "莱塔尼亚",
         "卡西米尔",
@@ -942,6 +1050,7 @@
     },
     {
       "name": "铃兰",
+      "profession": "辅助",
       "covenants": [
         "叙拉古"
       ],
@@ -950,6 +1059,7 @@
     },
     {
       "name": "贝洛内",
+      "profession": "近卫",
       "covenants": [
         "叙拉古",
         "突袭"
@@ -959,6 +1069,7 @@
     },
     {
       "name": "维娜·维多利亚",
+      "profession": "近卫",
       "covenants": [
         "维多利亚",
         "奇迹"
@@ -968,6 +1079,7 @@
     },
     {
       "name": "迷迭香",
+      "profession": "狙击",
       "covenants": [
         "精准",
         "助力"
@@ -977,6 +1089,7 @@
     },
     {
       "name": "隐德来希",
+      "profession": "近卫",
       "covenants": [
         "灵巧",
         "不屈"
@@ -986,6 +1099,7 @@
     },
     {
       "name": "塞雷娅",
+      "profession": "重装",
       "covenants": [
         "坚守",
         "协防干员"
@@ -995,6 +1109,7 @@
     },
     {
       "name": "溯光星源",
+      "profession": "辅助",
       "covenants": [
         "奥术"
       ],
@@ -1003,6 +1118,7 @@
     },
     {
       "name": "老鲤",
+      "profession": "特种",
       "covenants": [
         "投资人",
         "炎"
@@ -1012,6 +1128,7 @@
     },
     {
       "name": "Mon3tr",
+      "profession": "医疗",
       "covenants": [
         "协防干员"
       ],
@@ -1020,6 +1137,7 @@
     },
     {
       "name": "可露希尔",
+      "profession": "先锋",
       "covenants": [
         "投资人"
       ],
@@ -1028,6 +1146,7 @@
     },
     {
       "name": "“暴躁铁皮”",
+      "profession": "重装",
       "covenants": [
         "协防干员"
       ],
@@ -1036,6 +1155,7 @@
     },
     {
       "name": "鸿雪",
+      "profession": "狙击",
       "covenants": [
         "萨尔贡",
         "精准"
@@ -1045,6 +1165,7 @@
     },
     {
       "name": "焰尾",
+      "profession": "先锋",
       "covenants": [
         "卡西米尔",
         "迅捷"
@@ -1054,6 +1175,7 @@
     },
     {
       "name": "冻河",
+      "profession": "辅助",
       "covenants": [
         "乌萨斯",
         "迅捷"
@@ -1063,6 +1185,7 @@
     },
     {
       "name": "阿米娅",
+      "profession": "术师",
       "covenants": [
         "奇迹"
       ],
@@ -1071,6 +1194,7 @@
     },
     {
       "name": "引星棘刺",
+      "profession": "特种",
       "covenants": [
         "伊比利亚",
         "迅捷"
@@ -1080,6 +1204,7 @@
     },
     {
       "name": "烛煌",
+      "profession": "术师",
       "covenants": [
         "炎",
         "维多利亚",
@@ -1090,6 +1215,7 @@
     },
     {
       "name": "浊心斯卡蒂",
+      "profession": "辅助",
       "covenants": [
         "阿戈尔",
         "聚合"
@@ -1099,6 +1225,7 @@
     },
     {
       "name": "克莱门莎",
+      "profession": "近卫",
       "covenants": [
         "阿戈尔"
       ],
@@ -1107,6 +1234,7 @@
     },
     {
       "name": "耀骑士临光",
+      "profession": "近卫",
       "covenants": [
         "卡西米尔",
         "突袭"
@@ -1116,6 +1244,7 @@
     },
     {
       "name": "荒芜拉普兰德",
+      "profession": "术师",
       "covenants": [
         "叙拉古"
       ],
@@ -1124,6 +1253,7 @@
     },
     {
       "name": "酒神",
+      "profession": "辅助",
       "covenants": [
         "维多利亚"
       ],
@@ -1132,6 +1262,7 @@
     },
     {
       "name": "逻各斯",
+      "profession": "术师",
       "covenants": [
         "奥术",
         "远见"
@@ -1141,6 +1272,7 @@
     },
     {
       "name": "真言",
+      "profession": "术师",
       "covenants": [
         "萨尔贡"
       ],
@@ -1149,6 +1281,7 @@
     },
     {
       "name": "妮芙",
+      "profession": "术师",
       "covenants": [
         "迅捷",
         "远见"
@@ -1158,6 +1291,7 @@
     },
     {
       "name": "遥",
+      "profession": "辅助",
       "covenants": [
         "聚合",
         "奇迹"
@@ -1167,6 +1301,7 @@
     },
     {
       "name": "魔王",
+      "profession": "辅助",
       "covenants": [
         "调和"
       ],
@@ -1175,6 +1310,7 @@
     },
     {
       "name": "史尔特尔",
+      "profession": "近卫",
       "covenants": [
         "突袭",
         "不屈"
@@ -1184,6 +1320,7 @@
     },
     {
       "name": "锏",
+      "profession": "近卫",
       "covenants": [
         "卡西米尔",
         "谢拉格",
@@ -1194,6 +1331,7 @@
     },
     {
       "name": "机械师",
+      "profession": "重装",
       "covenants": [
         "协防干员",
         "坚守"
@@ -1203,6 +1341,7 @@
     },
     {
       "name": "塔露拉",
+      "profession": "近卫",
       "covenants": [
         "乌萨斯",
         "奥术",
@@ -1213,6 +1352,7 @@
     },
     {
       "name": "夕",
+      "profession": "术师",
       "covenants": [
         "炎",
         "奥术"
@@ -1222,6 +1362,7 @@
     },
     {
       "name": "蕾缪安",
+      "profession": "狙击",
       "covenants": [
         "精准"
       ],
@@ -1230,6 +1371,7 @@
     },
     {
       "name": "缪尔赛思",
+      "profession": "先锋",
       "covenants": [
         "协防干员"
       ],
@@ -1238,6 +1380,7 @@
     },
     {
       "name": "帕拉斯",
+      "profession": "近卫",
       "covenants": [
         "灵巧",
         "助力"

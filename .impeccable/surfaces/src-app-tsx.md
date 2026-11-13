@@ -9,7 +9,7 @@ related_targets: ["src/App.css","src/index.css"]
 
 Mode: Operate. Target: `src/App.tsx`.
 
-桌面为主，兼顾手机。Ban 设置置顶，名单以高密度头像网格呈现。用户后续要求规则只依据 PRTS；教程未明确的交叉情况显示「待核实」，不归入可用或已 Ban。用户选择了 catalog 草图，` .impeccable/mocks/decision/catalog.html` 是构图参考；图录世界参考位于 `.impeccable/references/`。不引入海报大标题、纹理、地图或虚构数据。
+桌面为主，兼顾手机。Ban 设置置顶，名单以高密度头像网格呈现。盟约数据与基础规则来源为 PRTS；用户确认核心盟约一禁一留、核心可用但附加全部禁用均不会被 Ban，仅保留「可用」与「已 Ban」。用户选择了 catalog 草图，` .impeccable/mocks/decision/catalog.html` 是构图参考；图录世界参考位于 `.impeccable/references/`。不引入海报大标题、纹理、地图或虚构数据。
 
 ## Direction contract
 

@@ -8,11 +8,11 @@ const operator = (name: string) => catalog.operators.find((item) => item.name ==
 for (const [name, bans, expected] of [
   ['折桠', [], 'available'],
   ['折桠', ['乌萨斯'], 'banned'],
-  ['折桠', ['不屈'], 'uncertain'],
+  ['折桠', ['不屈'], 'available'],
   ['折桠', ['乌萨斯', '不屈'], 'banned'],
-  ['烛煌', ['炎'], 'uncertain'],
+  ['烛煌', ['炎'], 'available'],
   ['烛煌', ['炎', '维多利亚'], 'banned'],
-  ['锏', ['谢拉格', '卡西米尔'], 'uncertain'],
+  ['锏', ['谢拉格', '卡西米尔'], 'available'],
   ['锏', ['谢拉格', '卡西米尔', '莱塔尼亚'], 'banned'],
   ['摆渡人', ['坚守'], 'available'],
   ['摆渡人', ['坚守', '不屈'], 'banned'],
@@ -66,7 +66,7 @@ test('已 Ban 干员稳定排到最后，清空 Ban 后恢复原顺序', () => {
   const result = filterRoster(bans, filters)
 
   assert.ok(result.some((item) => item.status === 'banned'))
-  assert.ok(result.some((item) => item.status === 'uncertain'))
+  assert.ok(result.some((item) => item.status === 'available'))
   assert.deepEqual(result.map((item) => item.name), [
     ...original.filter((item) => item.status !== 'banned').map((item) => item.name),
     ...original.filter((item) => item.status === 'banned').map((item) => item.name),
@@ -84,6 +84,7 @@ test('静态数据等级、盟约引用与本地图片完整', () => {
     assert.ok(Number.isInteger(item.tier) && item.tier >= 1 && item.tier <= 6, item.name)
     assert.ok(item.covenants.length > 0 && item.covenants.every((name) => covenants.has(name)), item.name)
     assert.ok(existsSync(new URL(`../public${item.image}`, import.meta.url)), item.image)
+    assert.ok(existsSync(new URL(`../public/images/professions/${item.profession}.png`, import.meta.url)), `${item.name} / ${item.profession}`)
   }
   for (const item of catalog.covenants) assert.ok(existsSync(new URL(`../public${item.logo}`, import.meta.url)), item.logo)
 })
