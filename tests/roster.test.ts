@@ -75,6 +75,32 @@ test('已 Ban 干员稳定排到最后，清空 Ban 后恢复原顺序', () => {
   assert.deepEqual(filterRoster(new Set(), filters).map((item) => item.name), originalNames)
 })
 
+test('名称、全拼和首字母搜索与现有筛选取交集', () => {
+  const filters = { tier: 0, covenants: [], status: 'all' } as const
+  for (const [search, name] of [
+    ['米娅', '阿米娅'],
+    ['amiya', '阿米娅'],
+    [' AMY ', '阿米娅'],
+    ['a mi ya', '阿米娅'],
+    ['mon3tr', 'Mon3tr'],
+    ['qiubai', '仇白'],
+    ['wnwdly', '维娜·维多利亚'],
+    ['lvgu', '旅骨'],
+  ]) {
+    assert.ok(filterRoster(new Set(), { ...filters, search }).some((item) => item.name === name), search)
+  }
+  assert.equal(filterRoster(new Set(), { ...filters, search: '   ' }).length, catalog.operators.length)
+  assert.equal(filterRoster(new Set(), { ...filters, search: '不存在的干员' }).length, 0)
+
+  const bans = new Set(['乌萨斯'])
+  const selected = { tier: 1, covenants: ['乌萨斯'], status: 'banned', search: 'zheya' } as const
+  assert.deepEqual(filterRoster(bans, selected).map((item) => item.name), ['折桠'])
+  assert.equal(filterRoster(bans, { ...selected, tier: 6 }).length, 0)
+  assert.equal(filterRoster(bans, { ...selected, covenants: ['炎'] }).length, 0)
+  assert.equal(filterRoster(bans, { ...selected, status: 'available' }).length, 0)
+  assert.deepEqual([...bans], ['乌萨斯'])
+})
+
 test('静态数据等级、盟约引用与本地图片完整', () => {
   const covenants = new Set(catalog.covenants.map((item) => item.name))
   assert.equal(new Set(catalog.operators.map((item) => item.name)).size, catalog.operators.length)

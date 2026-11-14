@@ -22,11 +22,12 @@ const statusOptions = [
 function App() {
   const [bans, setBans] = useState<Set<string>>(() => new Set());
   const [tier, setTier] = useState(0);
+  const [search, setSearch] = useState("");
   const [covenants, setCovenants] = useState<string[]>([]);
   const [disableBannedKinds, setDisableBannedKinds] = useState<string[]>([]);
   const [status, setStatus] = useState<StatusFilter>("all");
 
-  const roster = filterRoster(bans, { tier, covenants, status: "all" });
+  const roster = filterRoster(bans, { tier, covenants, search, status: "all" });
   const visibleOperators = roster.filter(
     (operator) => status === "all" || operator.status === status,
   );
@@ -38,6 +39,7 @@ function App() {
   };
   const hasFilters =
     tier !== 0 ||
+    search !== "" ||
     covenants.length > 0 ||
     disableBannedKinds.length > 0 ||
     status !== "all";
@@ -72,6 +74,7 @@ function App() {
 
   function clearFilters() {
     setTier(0);
+    setSearch("");
     setCovenants([]);
     setDisableBannedKinds([]);
     setStatus("all");
@@ -227,7 +230,7 @@ function App() {
 
           <div className="flex flex-wrap items-center gap-x-7 gap-y-3 border-b border-line py-4 mobile:gap-2.5 mobile:py-3">
             <div
-              className="flex items-center gap-[5px] mobile:gap-0.5"
+              className="flex items-center gap-[5px] mobile:w-full mobile:gap-0.5"
               role="group"
               aria-label="按等级筛选"
             >
@@ -246,6 +249,14 @@ function App() {
                 </Toggle>
               ))}
             </div>
+            <input
+              className="h-9 w-60 min-w-0 rounded-sm border border-line bg-surface px-2.5 text-[13px] text-ink caret-accent placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent mobile:h-10 mobile:flex-1 mobile:text-base"
+              type="search"
+              aria-label="搜索干员名称、拼音或首字母"
+              placeholder="搜索干员 / 拼音 / 首字母"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+            />
             <Button
               className="inline-flex min-h-9 items-center justify-center gap-[7px] rounded-sm border border-line bg-surface px-2.5 py-[5px] text-[13px] whitespace-nowrap enabled:hover:border-danger enabled:hover:bg-danger-soft enabled:hover:text-danger disabled:bg-[#f7f8f5] mobile:border-0 mobile:px-1 mobile:text-[11px]"
               onClick={clearFilters}
@@ -366,7 +377,7 @@ function App() {
               <p className="mb-5 text-[13px] text-muted">
                 {status === "banned" && bans.size === 0
                   ? "在上方点选盟约，即可查看受影响的干员。"
-                  : "试试其他等级、盟约或状态；重置筛选不会清除 Ban。"}
+                  : "试试其他关键词、等级、盟约或状态；重置筛选不会清除 Ban。"}
               </p>
               <Button
                 className="rounded-sm border border-accent bg-accent px-4.5 py-2 text-white hover:bg-[#334c2a]"

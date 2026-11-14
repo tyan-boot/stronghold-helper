@@ -1,3 +1,4 @@
+import { match } from "pinyin-pro";
 import catalog from "./data/stronghold.json" with { type: "json" };
 
 export { catalog };
@@ -55,15 +56,18 @@ export function getAvailability(
 
 export function filterRoster(
   bans: ReadonlySet<string>,
-  filters: { tier: number; covenants: readonly string[]; status: StatusFilter },
+  filters: { tier: number; covenants: readonly string[]; status: StatusFilter; search?: string },
 ) {
+  const search = filters.search?.trim() ?? "";
+
   return catalog.operators
     .map((operator) => ({ ...operator, ...getAvailability(operator, bans) }))
     .filter(
       (operator) =>
         (filters.tier === 0 || operator.tier === filters.tier) &&
         filters.covenants.every((name) => operator.covenants.includes(name)) &&
-        (filters.status === "all" || operator.status === filters.status),
+        (filters.status === "all" || operator.status === filters.status) &&
+        (search === "" || match(operator.name, search, { v: true }) !== null),
     )
     .sort(
       (a, b) => Number(a.status === "banned") - Number(b.status === "banned"),
