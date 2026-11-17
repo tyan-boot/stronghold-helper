@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Dialog } from "@base-ui/react/dialog";
+import { Progress } from "@base-ui/react/progress";
+import type { RecognitionProgress } from "../recognizeBans";
 import { FilePond, registerPlugin } from "react-filepond";
 import FilePondPluginFileValidateType from "filepond-plugin-file-validate-type";
 import "filepond/dist/filepond.min.css";
-import { catalog } from "./roster";
+import { catalog } from "../roster";
 
 registerPlugin(FilePondPluginFileValidateType);
 
@@ -16,6 +18,7 @@ export default function BanImportDialog({
   const [file, setFile] = useState<File | null>(null);
   const [result, setResult] = useState<string[] | null>(null);
   const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState<RecognitionProgress | null>(null);
   const [error, setError] = useState("");
   const available = new Set(catalog.covenants.map((item) => item.name));
 
@@ -25,13 +28,14 @@ export default function BanImportDialog({
     setError("");
     setResult(null);
     try {
-      const { recognizeBans } = await import("./recognizeBans");
-      setResult(await recognizeBans(file));
+      const { recognizeBans } = await import("../recognizeBans");
+      setResult(await recognizeBans(file, setProgress));
     } catch (cause) {
       console.error(cause);
       setError("识别失败，请检查图片和网络后重试。");
     } finally {
       setLoading(false);
+      setProgress(null);
     }
   }
 
@@ -96,8 +100,30 @@ export default function BanImportDialog({
             </div>
 
             <p className="text-[12px] text-muted" role="status">
-              {loading ? "首次识别需要下载模型，请稍候。" : ""}
+              {loading && (
+                progress?.stage === "downloading" ? "正在下载模型…" :
+                progress?.stage === "initializing" ? "模型已下载，正在初始化识别引擎…" :
+                progress?.stage === "recognizing" ? "正在识别图片…" : "正在准备识别…"
+              )}
             </p>
+            {progress?.stage === "downloading" && (
+              <Progress.Root
+                value={progress.total ? Math.min(100, progress.loaded / progress.total * 100) : null}
+                className="mt-2"
+              >
+                <div className="mb-1.5 flex justify-between gap-3 text-[12px] text-muted tabular-nums">
+                  <Progress.Label>模型下载进度</Progress.Label>
+                  <span>
+                    {progress.total && `${Math.min(100, Math.floor(progress.loaded / progress.total * 100))}% · `}
+                    {(progress.loaded / 1024 / 1024).toFixed(1)} MiB
+                    {progress.total ? ` / ${(progress.total / 1024 / 1024).toFixed(1)} MiB` : " 已接收"}
+                  </span>
+                </div>
+                <Progress.Track className="h-1.5 overflow-hidden rounded-sm bg-surface-soft">
+                  <Progress.Indicator className="h-full bg-accent data-indeterminate:w-1/3 data-indeterminate:animate-pulse motion-reduce:animate-none" />
+                </Progress.Track>
+              </Progress.Root>
+            )}
             {error && (
               <p role="alert" className="mt-3 text-danger">
                 {error}

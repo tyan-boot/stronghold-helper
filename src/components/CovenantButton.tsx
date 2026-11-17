@@ -1,5 +1,5 @@
 import { Toggle } from "@base-ui/react/toggle";
-import type { catalog } from "./roster";
+import type { catalog } from "../roster";
 
 export default function CovenantButton({
   covenant,

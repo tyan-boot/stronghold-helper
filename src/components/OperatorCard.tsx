@@ -1,4 +1,4 @@
-import { catalog, tierColors, tierLabels, type Availability, type Operator } from './roster'
+import { catalog, tierColors, tierLabels, type Availability, type Operator } from '../roster'
 
 const covenantLogos = new Map(catalog.covenants.map(({ name, logo }) => [name, logo]))
 
