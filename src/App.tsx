@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@base-ui/react/button";
 import { Switch } from "@base-ui/react/switch";
 import { Toggle } from "@base-ui/react/toggle";
+import BanImportDialog from "./BanImportDialog";
 import CovenantButton from "./CovenantButton";
 import OperatorCard from "./OperatorCard";
 import {
@@ -131,17 +132,35 @@ function App() {
           className="rounded-md border border-line bg-surface px-[26px] pt-6 tablet:px-5 tablet:pt-5 mobile:px-3.5 mobile:pt-4"
           aria-labelledby="ban-title"
         >
-          <div className="mb-6 flex items-start justify-between gap-5 mobile:relative mobile:mb-4.5 mobile:block">
-            <div>
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3 mobile:mb-4.5">
+            <div className="flex flex-wrap items-center gap-3">
               <h2
-                className="flex items-center gap-3 text-[20px] font-[650] mobile:gap-2 mobile:text-[18px]"
+                className="text-[20px] font-[650] mobile:text-[18px]"
                 id="ban-title"
               >
-                设置 Ban 位{" "}
+                设置 Ban 位
               </h2>
+              <BanImportDialog
+                onImport={(names) => {
+                  const next = new Set(names);
+                  setBans(next);
+                  setCovenants((current) =>
+                    current.filter((name) => {
+                      const covenant = catalog.covenants.find(
+                        (item) => item.name === name,
+                      );
+                      return (
+                        !covenant ||
+                        !disableBannedKinds.includes(covenant.kind) ||
+                        !next.has(name)
+                      );
+                    }),
+                  );
+                }}
+              />
             </div>
             <Button
-              className="inline-flex min-h-9 items-center justify-center gap-[7px] rounded-sm border border-line bg-surface px-2.5 py-[5px] text-[13px] whitespace-nowrap enabled:hover:border-danger enabled:hover:bg-danger-soft enabled:hover:text-danger disabled:bg-[#f7f8f5] mobile:absolute mobile:-top-0.5 mobile:right-0 mobile:border-0 mobile:px-1 mobile:text-[11px] narrow:static narrow:mt-2"
+              className="inline-flex min-h-9 items-center justify-center gap-[7px] rounded-sm border border-line bg-surface px-2.5 py-[5px] text-[13px] whitespace-nowrap enabled:hover:border-danger enabled:hover:bg-danger-soft enabled:hover:text-danger disabled:bg-[#f7f8f5] mobile:border-0 mobile:px-1 mobile:text-[11px]"
               onClick={() => setBans(new Set())}
               disabled={bans.size === 0}
             >

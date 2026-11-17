@@ -9,6 +9,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     VitePWA({
+      workbox: { globIgnores: ["**/ort-wasm-*.wasm"] },
       includeAssets: ["favicon.svg", "icons.svg", "apple-touch-icon-180x180.png"],
       manifest: {
         id: "/",
