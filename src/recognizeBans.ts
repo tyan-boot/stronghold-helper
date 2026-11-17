@@ -29,7 +29,7 @@ const names = [
   "阿戈尔",
 ];
 
-const size = 736;
+const size = 1024;
 let session: Promise<ort.InferenceSession> | undefined;
 
 export async function recognizeBans(file: File): Promise<string[]> {
