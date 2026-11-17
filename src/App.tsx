@@ -44,6 +44,8 @@ function App() {
     covenants.length > 0 ||
     disableBannedKinds.length > 0 ||
     status !== "all";
+  const showBannedGroups =
+    status === "banned" && tier === 0 && search.trim() === "" && covenants.length === 0;
 
   function toggleBan(name: string, kind: string) {
     if (!bans.has(name) && disableBannedKinds.includes(kind)) {
@@ -367,13 +369,43 @@ function App() {
 
           <div className="py-3 text-muted mobile:py-3" />
 
-          {visibleOperators.length > 0 ? (
+          {visibleOperators.length > 0 && showBannedGroups ? (
+            <div className="divide-y divide-line">
+              {catalog.covenants.filter((covenant) => bans.has(covenant.name)).map((covenant) => {
+                const operators = visibleOperators
+                  .filter((operator) => operator.covenants.includes(covenant.name))
+                  .sort((a, b) => b.tier - a.tier);
+                if (operators.length === 0) return null;
+
+                return (
+                  <section
+                    key={covenant.name}
+                    aria-label={`${covenant.name}已 Ban 干员`}
+                    className="grid grid-cols-[96px_minmax(0,1fr)] items-start gap-6 py-6 first:pt-0 last:pb-0 mobile:grid-cols-[56px_minmax(0,1fr)] mobile:gap-3 mobile:py-4"
+                  >
+                    <h3 className="flex flex-col items-center gap-2 pt-1 text-center text-[14px] text-muted mobile:text-[12px]">
+                      <span className="flex size-14 items-center justify-center rounded-full border-2 border-[#4aebb5] opacity-65 grayscale [background:radial-gradient(#25be97,#212121_80%)] mobile:size-10">
+                        <img className="size-4/5 object-contain" src={covenant.logo} alt="" width="40" height="40" />
+                      </span>
+                      {covenant.name}
+                    </h3>
+                    <ul className="grid grid-cols-8 gap-3 compact:grid-cols-6 tablet:grid-cols-4 mobile:grid-cols-3 mobile:gap-2">
+                      {operators.map((operator) => (
+                        <OperatorCard key={operator.name} operator={operator} bans={bans} compact dimBanned={false} />
+                      ))}
+                    </ul>
+                  </section>
+                );
+              })}
+            </div>
+          ) : visibleOperators.length > 0 ? (
             <ul className="grid grid-cols-8 items-stretch gap-x-3 gap-y-3.5 compact:grid-cols-6 tablet:grid-cols-5 mobile:grid-cols-3 mobile:gap-x-2 mobile:gap-y-2.5">
               {visibleOperators.map((operator) => (
                 <OperatorCard
                   key={operator.name}
                   operator={operator}
                   bans={bans}
+                  dimBanned={status !== "banned"}
                 />
               ))}
             </ul>
