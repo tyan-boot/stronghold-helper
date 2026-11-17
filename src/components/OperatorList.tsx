@@ -1,6 +1,7 @@
 import { Button } from "@base-ui/react/button";
 import { catalog, type Availability, type Operator, type StatusFilter } from "../roster";
 import OperatorCard from "./OperatorCard";
+import OperatorTraitsDialog from "./OperatorTraitsDialog";
 
 export default function OperatorList({
   operators,
@@ -15,7 +16,7 @@ export default function OperatorList({
   grouped: boolean;
   onClearFilters: () => void;
 }) {
-  return operators.length > 0 && grouped ? (
+  const content = operators.length > 0 && grouped ? (
     <div className="divide-y divide-line">
       {catalog.covenants.filter((covenant) => bans.has(covenant.name)).map((covenant) => {
         const members = operators
@@ -83,5 +84,12 @@ export default function OperatorList({
         查看全部干员
       </Button>
     </div>
+  );
+
+  return (
+    <OperatorTraitsDialog>
+      {operators.length > 0 && <p className="mb-3 text-[12px] text-muted">点击干员卡片查看特质</p>}
+      {content}
+    </OperatorTraitsDialog>
   );
 }

@@ -1,3 +1,4 @@
+import { Dialog } from '@base-ui/react/dialog'
 import { catalog, tierColors, tierLabels, type Availability, type Operator } from '../roster'
 
 const covenantLogos = new Map(catalog.covenants.map(({ name, logo }) => [name, logo]))
@@ -9,7 +10,13 @@ export default function OperatorCard({ operator, bans, compact = false, dimBanne
   dimBanned?: boolean
 }) {
   return (
-    <li data-status={operator.status} title={compact ? operator.name : undefined} className="group min-w-0 overflow-hidden rounded-sm border border-line bg-surface data-[status=banned]:border-[#dababe]">
+    <li data-status={operator.status} className="group relative min-w-0 overflow-hidden rounded-sm border border-line bg-surface data-[status=banned]:border-[#dababe]">
+      <Dialog.Trigger
+        payload={operator}
+        aria-label={`查看${operator.name}的特质`}
+        title={`${operator.name} · 查看特质`}
+        className="absolute inset-0 z-10 rounded-sm hover:inset-ring-2 hover:inset-ring-accent focus-visible:-outline-offset-2"
+      />
       <div className={`relative overflow-hidden bg-[#e7e9e3] ${compact ? 'aspect-square' : 'aspect-[4/5]'}`}>
         <img
           className={`block size-full object-scale-down object-top transition-[filter,opacity] duration-180 ease-[ease-out] motion-reduce:transition-none ${dimBanned ? 'group-data-[status=banned]:opacity-50 group-data-[status=banned]:grayscale' : ''}`}

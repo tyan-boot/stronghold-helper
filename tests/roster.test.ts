@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { existsSync } from 'node:fs'
 import test from 'node:test'
+import traitsData from '../src/data/operator-traits.json' with { type: 'json' }
 import { catalog, filterRoster, getAvailability } from '../src/roster.ts'
 
 const operator = (name: string) => catalog.operators.find((item) => item.name === name)!
@@ -99,6 +100,18 @@ test('名称、全拼和首字母搜索与现有筛选取交集', () => {
   assert.equal(filterRoster(bans, { ...selected, covenants: ['炎'] }).length, 0)
   assert.equal(filterRoster(bans, { ...selected, status: 'available' }).length, 0)
   assert.deepEqual([...bans], ['乌萨斯'])
+})
+
+test('特质数据与干员名单一一对应，保留未单独列出的精锐特质', () => {
+  assert.deepEqual(
+    traitsData.operators.map((trait) => trait.name).sort(),
+    catalog.operators.map((item) => item.name).sort(),
+  )
+  for (const trait of traitsData.operators) {
+    assert.ok(trait.type.trim() && trait.normal.trim(), trait.name)
+    assert.ok(trait.elite === null || trait.elite.trim(), trait.name)
+  }
+  assert.equal(traitsData.operators.find((trait) => trait.name === '杰克')?.elite, null)
 })
 
 test('静态数据等级、盟约引用与本地图片完整', () => {
